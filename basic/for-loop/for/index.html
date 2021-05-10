@@ -195,7 +195,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "列印陣列 var name_list = []string{`Golang`, `Python`, `PHP`} for key, value := range name_list { fmt.Printf(\u0026#34;language key: %d = %s\\n\u0026#34;, key, value) } \/\/ language key: 0 = Golang \/\/ language key: 1 = Python \/\/ language key: 2 = PHP arr1 := [3][2]int{{1, 2}, {3, 4}, {5, 6}} fmt.Println(arr1) \/\/ [[1 2] [3 4] [5 6]]  for index, element := range arr1 { fmt.Printf(\u0026#34;%d =\u0026gt; %d\\n\u0026#34;, index, element) } \/\/ 0 =\u0026gt; [1 2] \/\/ 1 =\u0026gt; [3 4] \/\/ 2 =\u0026gt; [5 6] "
+		"articleBody": "列印陣列 var name_list = []string{`Golang`, `Python`, `PHP`} for key, value := range name_list { fmt.Printf(\u0026#34;language key: %d = %s\\n\u0026#34;, key, value) } \/\/ language key: 0 = Golang \/\/ language key: 1 = Python \/\/ language key: 2 = PHP arr1 := [3][2]int{{1, 2}, {3, 4}, {5, 6}} fmt.Println(arr1) \/\/ [[1 2] [3 4] [5 6]]  for key, value := range arr1 { fmt.Printf(\u0026#34;%d =\u0026gt; %d\\n\u0026#34;, key, value) } \/\/ 0 =\u0026gt; [1 2] \/\/ 1 =\u0026gt; [3 4] \/\/ 2 =\u0026gt; [5 6] "
 	}
 </script>
 
@@ -603,7 +603,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1df66043789f97f4d2c2ca91c03230d9.json"
+  data-offline-search-index-json-src="/offline-search-index.3841ac65bd082b92d2d8ca47cbac2840.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -639,7 +639,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1df66043789f97f4d2c2ca91c03230d9.json"
+  data-offline-search-index-json-src="/offline-search-index.3841ac65bd082b92d2d8ca47cbac2840.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -965,8 +965,8 @@ if (!doNotTrack) {
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr1</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">// [[1 2] [3 4] [5 6]]
 </span><span style="color:#8f5902;font-style:italic"></span>
 
-<span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">index</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">element</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87;font-weight:bold">range</span> <span style="color:#000">arr1</span> <span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Printf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;%d =&gt; %d\n&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">index</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">element</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">key</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">value</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87;font-weight:bold">range</span> <span style="color:#000">arr1</span> <span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Printf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;%d =&gt; %d\n&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">key</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">value</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#000;font-weight:bold">}</span>
 <span style="color:#8f5902;font-style:italic">// 0 =&gt; [1 2]
 </span><span style="color:#8f5902;font-style:italic">// 1 =&gt; [3 4]

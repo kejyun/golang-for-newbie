@@ -27,7 +27,7 @@
 <meta itemprop="name" content="一般">
 <meta itemprop="description" content="Golang 基礎: 一般變數"><meta itemprop="datePublished" content="2021-05-10T08:50:29&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-10T08:50:29&#43;08:00" />
-<meta itemprop="wordCount" content="109"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="113"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,一般變數," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -195,7 +195,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "一般變數宣告 定義整數變數\nvar num int = 10 var num = 10 整數預設值\nvar num int = 0 var num int 單行宣告\nvar name, age, height = \u0026#34;KJ\u0026#34;, 18, 199.9 多行宣告\nvar ( name = \u0026#34;KJ\u0026#34; age = 18 height = 199.9 ) 多行宣告加入型態\nvar ( name string = \u0026#34;KJ\u0026#34; age uint = 18 height float32 = 199.9 ) 多行宣告沒有設定預設值\nvar ( name string age uint height float32 ) 短變數宣告\nname := \u0026#34;KJ\u0026#34; age := 18 height := 199.9 單行短變數宣告\nname, age, height := \u0026#34;KJ\u0026#34;, 18, 199.9 常數變數宣告 const AGE int = 18 單行宣告常數\nconst AUTHOR, AGE = \u0026#34;KJ\u0026#34;, 18 多行宣告常數\nconst ( AUTHOR = \u0026#34;KJ\u0026#34; AGE = 18 ) "
+		"articleBody": "一般變數宣告 一般變數宣告預設值 var num int = 0 var num int 一般變數宣告指定值 var num int = 10 var num = 10 單行宣告  應少用，程式碼可讀性不高\n var name, age, height = \u0026#34;KJ\u0026#34;, 18, 199.9 多行宣告 var ( name = \u0026#34;KJ\u0026#34; age = 18 height = 199.9 ) 多行宣告加入型態 var ( name string = \u0026#34;KJ\u0026#34; age uint = 18 height float32 = 199.9 ) 多行宣告沒有設定預設值 var ( name string age uint height float32 ) 短變數宣告 name := \u0026#34;KJ\u0026#34; age := 18 height := 199.9 單行短變數宣告  應少用，程式碼可讀性不高\n name, age, height := \u0026#34;KJ\u0026#34;, 18, 199.9 常數變數宣告 一般常數宣告 const AGE int = 18 單行常數宣告  應少用，程式碼可讀性不高\n const AUTHOR, AGE = \u0026#34;KJ\u0026#34;, 18 多行常數宣告 const ( AUTHOR = \u0026#34;KJ\u0026#34; AGE = 18 ) "
 	}
 </script>
 
@@ -603,7 +603,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1df66043789f97f4d2c2ca91c03230d9.json"
+  data-offline-search-index-json-src="/offline-search-index.3841ac65bd082b92d2d8ca47cbac2840.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -639,7 +639,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1df66043789f97f4d2c2ca91c03230d9.json"
+  data-offline-search-index-json-src="/offline-search-index.3841ac65bd082b92d2d8ca47cbac2840.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -883,6 +883,30 @@ if (!doNotTrack) {
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#一般變數宣告">一般變數宣告</a>
+      <ul>
+        <li><a href="#一般變數宣告預設值">一般變數宣告預設值</a></li>
+        <li><a href="#一般變數宣告指定值">一般變數宣告指定值</a></li>
+        <li><a href="#單行宣告">單行宣告</a></li>
+        <li><a href="#多行宣告">多行宣告</a></li>
+        <li><a href="#多行宣告加入型態">多行宣告加入型態</a></li>
+        <li><a href="#多行宣告沒有設定預設值">多行宣告沒有設定預設值</a></li>
+        <li><a href="#短變數宣告">短變數宣告</a></li>
+        <li><a href="#單行短變數宣告">單行短變數宣告</a></li>
+      </ul>
+    </li>
+    <li><a href="#常數變數宣告">常數變數宣告</a>
+      <ul>
+        <li><a href="#一般常數宣告">一般常數宣告</a></li>
+        <li><a href="#單行常數宣告">單行常數宣告</a></li>
+        <li><a href="#多行常數宣告">多行常數宣告</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -953,43 +977,53 @@ if (!doNotTrack) {
 		
 		
 		<h2 id="一般變數宣告">一般變數宣告</h2>
-<p>定義整數變數</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">num</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">10</span>
-<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">num</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">10</span>
-</code></pre></div><p>整數預設值</p>
+<h3 id="一般變數宣告預設值">一般變數宣告預設值</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">num</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span>
 <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">num</span> <span style="color:#204a87;font-weight:bold">int</span>
-</code></pre></div><p>單行宣告</p>
+</code></pre></div><h3 id="一般變數宣告指定值">一般變數宣告指定值</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">num</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">10</span>
+<span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">num</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">10</span>
+</code></pre></div><h3 id="單行宣告">單行宣告</h3>
+<blockquote>
+<p>應少用，程式碼可讀性不高</p>
+</blockquote>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">name</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">age</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">height</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">199.9</span>
-</code></pre></div><p>多行宣告</p>
+</code></pre></div><h3 id="多行宣告">多行宣告</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000;font-weight:bold">(</span>
 	<span style="color:#000">name</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span>
 	<span style="color:#000">age</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">18</span>
 	<span style="color:#000">height</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">199.9</span>
 <span style="color:#000;font-weight:bold">)</span>
-</code></pre></div><p>多行宣告加入型態</p>
+</code></pre></div><h3 id="多行宣告加入型態">多行宣告加入型態</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000;font-weight:bold">(</span>
 	<span style="color:#000">name</span> <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span>
 	<span style="color:#000">age</span> <span style="color:#204a87;font-weight:bold">uint</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">18</span>
 	<span style="color:#000">height</span> <span style="color:#204a87;font-weight:bold">float32</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">199.9</span>
 <span style="color:#000;font-weight:bold">)</span>
-</code></pre></div><p>多行宣告沒有設定預設值</p>
+</code></pre></div><h3 id="多行宣告沒有設定預設值">多行宣告沒有設定預設值</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000;font-weight:bold">(</span>
 	<span style="color:#000">name</span> <span style="color:#204a87;font-weight:bold">string</span>
 	<span style="color:#000">age</span> <span style="color:#204a87;font-weight:bold">uint</span>
 	<span style="color:#000">height</span> <span style="color:#204a87;font-weight:bold">float32</span>
 <span style="color:#000;font-weight:bold">)</span>
-</code></pre></div><p>短變數宣告</p>
+</code></pre></div><h3 id="短變數宣告">短變數宣告</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">name</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span>
 <span style="color:#000">age</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#0000cf;font-weight:bold">18</span>
 <span style="color:#000">height</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#0000cf;font-weight:bold">199.9</span>
-</code></pre></div><p>單行短變數宣告</p>
+</code></pre></div><h3 id="單行短變數宣告">單行短變數宣告</h3>
+<blockquote>
+<p>應少用，程式碼可讀性不高</p>
+</blockquote>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">name</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">age</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">height</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">199.9</span>
 </code></pre></div><h2 id="常數變數宣告">常數變數宣告</h2>
+<h3 id="一般常數宣告">一般常數宣告</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">AGE</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">18</span>
-</code></pre></div><p>單行宣告常數</p>
+</code></pre></div><h3 id="單行常數宣告">單行常數宣告</h3>
+<blockquote>
+<p>應少用，程式碼可讀性不高</p>
+</blockquote>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000">AUTHOR</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">AGE</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">18</span>
-</code></pre></div><p>多行宣告常數</p>
+</code></pre></div><h3 id="多行常數宣告">多行常數宣告</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">const</span> <span style="color:#000;font-weight:bold">(</span>
 	<span style="color:#000">AUTHOR</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span>
 	<span style="color:#000">AGE</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">18</span>

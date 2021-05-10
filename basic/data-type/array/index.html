@@ -27,7 +27,7 @@
 <meta itemprop="name" content="陣列">
 <meta itemprop="description" content="Golang 基礎: 陣列變數"><meta itemprop="datePublished" content="2021-05-10T08:50:29&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-10T08:50:29&#43;08:00" />
-<meta itemprop="wordCount" content="164"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="165"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,陣列變數," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -195,7 +195,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "陣列 指定陣列大小\nvar arr [5]int arr[0] = 1 arr[1] = 2 arr[4] = 5 fmt.Println(arr) \/\/ [1 2 0 0 5] arr := [5]int{1, 2, 3} fmt.Println(arr) \/\/ [1 2 3 0 0] 不指定陣列大小\narr := [...]int{1, 2, 3, 4, 5} fmt.Println(arr) \/\/ [1 2 3 4 5] 巢狀陣列 var arr [3][2]int fmt.Println(arr) \/\/ [[0 0] [0 0] [0 0]] 指定巢狀陣列預設值\narr1 := [3][2]int{{1, 2}, {3, 4}, {5, 6}} fmt.Println(arr1) \/\/ [[1 2] [3 4] [5 6]]  arr2 := [...][2]int{{1, 2}, {3, 4}, {5, 6}} fmt.Println(arr2) \/\/ [[1 2] [3 4] [5 6]] 複製陣列 限制陣列長度\narr := [5]int{1, 2, 3, 4, 5} \/\/ 指定要複製的陣列 var arr_copy [5]int arr_copy = arr arr_copy[3] = 99 fmt.Println(arr) \/\/ [1 2 3 4 5] fmt.Println(arr_copy) \/\/ [1 2 3 99 5] 不限制陣列長度，複製的陣列會變成傳址的方式\narr := []int{1, 2, 3, 4, 5, 6, 7} var arr_copy []int arr_copy = arr arr_copy[3] = 99 fmt.Println(arr) \/\/ [1 2 3 99 5 6 7] fmt.Println(arr_copy) \/\/ [1 2 3 99 5 6 7] "
+		"articleBody": "陣列 指定陣列大小 var arr [5]int arr[0] = 1 arr[1] = 2 arr[4] = 5 fmt.Println(arr) \/\/ [1 2 0 0 5] arr := [5]int{1, 2, 3} fmt.Println(arr) \/\/ [1 2 3 0 0] 不指定陣列大小 arr := [...]int{1, 2, 3, 4, 5} fmt.Println(arr) \/\/ [1 2 3 4 5] 巢狀陣列 var arr [3][2]int fmt.Println(arr) \/\/ [[0 0] [0 0] [0 0]] 指定巢狀陣列預設值 arr1 := [3][2]int{{1, 2}, {3, 4}, {5, 6}} fmt.Println(arr1) \/\/ [[1 2] [3 4] [5 6]]  arr2 := [...][2]int{{1, 2}, {3, 4}, {5, 6}} fmt.Println(arr2) \/\/ [[1 2] [3 4] [5 6]] 複製陣列 限制陣列長度 arr := [5]int{1, 2, 3, 4, 5} \/\/ 指定要複製的陣列 var arr_copy [5]int arr_copy = arr arr_copy[3] = 99 fmt.Println(arr) \/\/ [1 2 3 4 5] fmt.Println(arr_copy) \/\/ [1 2 3 99 5] 不限制陣列長度  複製的陣列會變成傳址的方式\n arr := []int{1, 2, 3, 4, 5, 6, 7} var arr_copy []int arr_copy = arr arr_copy[3] = 99 fmt.Println(arr) \/\/ [1 2 3 99 5 6 7] fmt.Println(arr_copy) \/\/ [1 2 3 99 5 6 7] "
 	}
 </script>
 
@@ -603,7 +603,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1df66043789f97f4d2c2ca91c03230d9.json"
+  data-offline-search-index-json-src="/offline-search-index.3841ac65bd082b92d2d8ca47cbac2840.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -639,7 +639,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1df66043789f97f4d2c2ca91c03230d9.json"
+  data-offline-search-index-json-src="/offline-search-index.3841ac65bd082b92d2d8ca47cbac2840.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -883,6 +883,28 @@ if (!doNotTrack) {
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#陣列">陣列</a>
+      <ul>
+        <li><a href="#指定陣列大小">指定陣列大小</a></li>
+        <li><a href="#不指定陣列大小">不指定陣列大小</a></li>
+      </ul>
+    </li>
+    <li><a href="#巢狀陣列">巢狀陣列</a>
+      <ul>
+        <li><a href="#指定巢狀陣列預設值">指定巢狀陣列預設值</a></li>
+      </ul>
+    </li>
+    <li><a href="#複製陣列">複製陣列</a>
+      <ul>
+        <li><a href="#限制陣列長度">限制陣列長度</a></li>
+        <li><a href="#不限制陣列長度">不限制陣列長度</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -953,7 +975,7 @@ if (!doNotTrack) {
 		
 		
 		<h2 id="陣列">陣列</h2>
-<p>指定陣列大小</p>
+<h3 id="指定陣列大小">指定陣列大小</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">arr</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span>
 <span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">1</span>
 <span style="color:#000">arr</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2</span>
@@ -963,21 +985,21 @@ if (!doNotTrack) {
 </span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">arr</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">}</span>
 
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">)</span>  <span style="color:#8f5902;font-style:italic">// [1 2 3 0 0]
-</span></code></pre></div><p>不指定陣列大小</p>
+</span></code></pre></div><h3 id="不指定陣列大小">不指定陣列大小</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">arr</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">}</span>
 
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">)</span>  <span style="color:#8f5902;font-style:italic">// [1 2 3 4 5]
 </span></code></pre></div><h2 id="巢狀陣列">巢狀陣列</h2>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">arr</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">][</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span>
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">// [[0 0] [0 0] [0 0]]
-</span></code></pre></div><p>指定巢狀陣列預設值</p>
+</span></code></pre></div><h3 id="指定巢狀陣列預設值">指定巢狀陣列預設值</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">arr1</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">][</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{{</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">},</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">},</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">}}</span>
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr1</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">// [[1 2] [3 4] [5 6]]
 </span><span style="color:#8f5902;font-style:italic"></span>
 <span style="color:#000">arr2</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">][</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{{</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">},</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">},</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">}}</span>
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr2</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">// [[1 2] [3 4] [5 6]]
 </span></code></pre></div><h2 id="複製陣列">複製陣列</h2>
-<p>限制陣列長度</p>
+<h3 id="限制陣列長度">限制陣列長度</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">arr</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">}</span>
 <span style="color:#8f5902;font-style:italic">// 指定要複製的陣列
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">arr_copy</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span>
@@ -988,7 +1010,10 @@ if (!doNotTrack) {
 
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">)</span>      <span style="color:#8f5902;font-style:italic">// [1 2 3 4 5]
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr_copy</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">// [1 2 3 99 5]
-</span></code></pre></div><p>不限制陣列長度，複製的陣列會變成傳址的方式</p>
+</span></code></pre></div><h3 id="不限制陣列長度">不限制陣列長度</h3>
+<blockquote>
+<p>複製的陣列會變成傳址的方式</p>
+</blockquote>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">arr</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000;font-weight:bold">}</span>
 
 <span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">arr_copy</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">int</span>
