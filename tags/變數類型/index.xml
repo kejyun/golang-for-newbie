@@ -1,0 +1,122 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang 菜雞修煉場 – 變數類型</title>
+    <link>https://golang-for-newbie.kejyun.com/tags/%E8%AE%8A%E6%95%B8%E9%A1%9E%E5%9E%8B/</link>
+    <description>Recent content in 變數類型 on Golang 菜雞修煉場</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 10 May 2021 08:50:29 +0800</lastBuildDate>
+    
+	  <atom:link href="https://golang-for-newbie.kejyun.com/tags/%E8%AE%8A%E6%95%B8%E9%A1%9E%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Basic: 變數類型</title>
+      <link>https://golang-for-newbie.kejyun.com/basic/data-type/</link>
+      <pubDate>Mon, 10 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://golang-for-newbie.kejyun.com/basic/data-type/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;整數&#34;&gt;整數&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;類型&lt;/th&gt;
+&lt;th&gt;min&lt;/th&gt;
+&lt;th&gt;max&lt;/th&gt;
+&lt;th&gt;範圍&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;uint8 or byte&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;255&lt;/td&gt;
+&lt;td&gt;2^0 ~ 2^8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;uint16&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;65585&lt;/td&gt;
+&lt;td&gt;2^0 ~ 2^16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;uint32 or rune&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;4294967296&lt;/td&gt;
+&lt;td&gt;2^0 ~ 2^32&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;uint64&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1.84467E+19&lt;/td&gt;
+&lt;td&gt;2^0 ~ 2^64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;int8&lt;/td&gt;
+&lt;td&gt;-128&lt;/td&gt;
+&lt;td&gt;128 - 1&lt;/td&gt;
+&lt;td&gt;-2^7 ~ 2^7 - 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;int16&lt;/td&gt;
+&lt;td&gt;-32768&lt;/td&gt;
+&lt;td&gt;32768 - 1&lt;/td&gt;
+&lt;td&gt;-2^15 ~ 2^15 - 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;int32&lt;/td&gt;
+&lt;td&gt;-2147483648&lt;/td&gt;
+&lt;td&gt;2147483648 - 1&lt;/td&gt;
+&lt;td&gt;-2^31 ~ 2^31 - 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;int64&lt;/td&gt;
+&lt;td&gt;-9.22337E+18&lt;/td&gt;
+&lt;td&gt;9.22337E+18 - 1&lt;/td&gt;
+&lt;td&gt;-2^63 ~ 2^63 - 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;浮點數&#34;&gt;浮點數&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;類型&lt;/th&gt;
+&lt;th&gt;min&lt;/th&gt;
+&lt;th&gt;max&lt;/th&gt;
+&lt;th&gt;範圍&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;float32&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-1.4&lt;em&gt;10^-45 ~ 3.4&lt;/em&gt;10^38&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;float64&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-4.94&lt;em&gt;10^-324 ~ 1.79&lt;/em&gt;10^308&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://michaelchen.tech/golang-programming/data-type/&#34;&gt;[Golang] 程式設計教學：資料型態 (Data Type) | Michael Chen 的技術文件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

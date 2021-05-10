@@ -1,0 +1,71 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang 菜雞修煉場 – 資源</title>
+    <link>https://golang-for-newbie.kejyun.com/tags/%E8%B3%87%E6%BA%90/</link>
+    <description>Recent content in 資源 on Golang 菜雞修煉場</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 07 May 2021 08:50:29 +0800</lastBuildDate>
+    
+	  <atom:link href="https://golang-for-newbie.kejyun.com/tags/%E8%B3%87%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 資源</title>
+      <link>https://golang-for-newbie.kejyun.com/docs/resource/</link>
+      <pubDate>Fri, 07 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://golang-for-newbie.kejyun.com/docs/resource/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;官方&#34;&gt;官方&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tour.golang.org/list&#34;&gt;A Tour of Go&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;教學網站&#34;&gt;教學網站&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.twcode01.com/go/go-tutorial.html&#34;&gt;Go 語言教學 | 線上程式語言教學練習&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hackmd.io/14VCFPt4QbiHuDYtYwD94g#Go-%E8%AA%9E%E8%A8%80%E7%9A%84%E9%87%8D%E8%A6%81%E7%89%B9%E8%89%B2&#34;&gt;GoLang入門基礎: - HackMD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hackmd.io/-J9NfqzpTKaAhtUclzul9g&#34;&gt;GoLang進階語法: - HackMD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hackmd.io/6oi3IQq3Tyq2ZGlQI4CBUw&#34;&gt;GoLang 應用範例: - HackMD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://studygolang.gitbook.io/learn-go-with-tests/&#34;&gt;Learn Go with tests - learn-go-with-tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://willh.gitbook.io/build-web-application-with-golang-zhtw/&#34;&gt;Introduction - 使用 Golang 打造 Web 應用程式&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/doggy8088/build-web-application-with-golang-zhtw&#34;&gt;GitHub - doggy8088/build-web-application-with-golang-zhtw: 使用 Golang 打造 Web 應用程式 (正體中文版)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;範例&#34;&gt;範例&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/&#34;&gt;Go by Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://books.halfrost.com/leetcode/&#34;&gt;序 | LeetCode Cookbook&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/halfrost/LeetCode-Go&#34;&gt;GitHub - halfrost/LeetCode-Go: ✅ Solutions to LeetCode by Go, 100% test coverage, runtime beats 100% / LeetCode 题解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文章&#34;&gt;文章&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://michaelchen.tech/golang-programming/&#34;&gt;[Golang] 程式設計教學 | Michael Chen 的技術文件&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/citycoddee/go-%E8%AA%9E%E8%A8%80%E7%AD%86%E8%A8%98-0-%E5%AD%B8%E9%80%99%E8%83%BD%E5%B9%B9%E5%98%9B-fd6e433c1ba0&#34;&gt;Go 語言筆記(0) — 學這能幹嘛？. 「即將啟程的旅人啊，汝為何而Go?」 | by Jyue Chen | 整個程式都是我的咖啡館 | Medium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ithelp.ithome.com.tw/users/20102562/ironman/1342&#34;&gt;從無到有，使用 Go 開發應用程式 :: 2018 iT 邦幫忙鐵人賽&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;影片&#34;&gt;影片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=YS4e4q9oBaU&#34;&gt;Learn Go Programming - Golang Tutorial for Beginners - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
