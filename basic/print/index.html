@@ -185,7 +185,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "跳脫字元    類型 說明     \u0026ldquo;雙引號\u0026rdquo; 可跳脫字元   `重音符` 保留原始字串    a := \u0026#34;雙引號:可跳脫字元\\t \\n等\u0026#34; b := `重音符:保留原始字串 \\t \\n 等` fmt.Println(a) fmt.Println(b) \/\/ 雙引號:可跳脫字元 \/\/ 等 \/\/ 重音符:保留原始字串 \\t \\n 等 列印函數    類型 說明 description     fmt.Print 列印 print   fmt.Println 列印 \u002b 換行 print \u002b new line   fmt.Printf 格式化列印(沒有換行) format print    fmt.Print 列印 a := `KJ` fmt.Print(a) fmt.Print(a) fmt.Print(a) \/\/ KJKJKJ fmt.Println 列印 \u002b 換行 a := `KJ` fmt.Println(a) fmt.Println(a) fmt.Println(a) \/\/ KJ \/\/ KJ \/\/ KJ fmt.Printf 格式化列印 a := `KJ` fmt.Printf(\u0026#34;a: %v type: %T\\n\u0026#34;, a, a) \/\/ a: KJ type: string 參考資料  fmt - The Go Programming Language # Day06 Go開教基本語法 (fmt) - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天  "
+		"articleBody": "跳脫字元    類型 說明     \u0026ldquo;雙引號\u0026rdquo; 可跳脫字元   `重音符` 保留原始字串    a := \u0026#34;雙引號:可跳脫字元\\t \\n等\u0026#34; b := `重音符:保留原始字串 \\t \\n 等` fmt.Println(a) fmt.Println(b) \/\/ 雙引號:可跳脫字元 \/\/ 等 \/\/ 重音符:保留原始字串 \\t \\n 等 列印函數 print    類型 說明 description     fmt.Print 列印 print   fmt.Println 列印 \u002b 換行 print \u002b new line   fmt.Printf 格式化列印(沒有換行) format print    fmt.Print 列印 a := `KJ` fmt.Print(a) fmt.Print(a) fmt.Print(a) \/\/ KJKJKJ fmt.Println 列印 \u002b 換行 a := `KJ` fmt.Println(a) fmt.Println(a) fmt.Println(a) \/\/ KJ \/\/ KJ \/\/ KJ fmt.Printf 格式化列印 a := `KJ` fmt.Printf(\u0026#34;a: %v type: %T\\n\u0026#34;, a, a) \/\/ a: KJ type: string 儲存列印字串 sprint    類型 說明 description     fmt.str2 儲存列印字串 save print string   fmt.Sprintln 儲存列印字串 \u002b 換行 save print string \u002b new line   fmt.Sprintf 儲存列印格式化字串(沒有換行) save format print string    fmt.Sprint 儲存列印字串 s1 := \u0026#34;I\u0026#34; s2 := \u0026#34;am\u0026#34; s3 := \u0026#34;KJ\u0026#34; str2 := fmt.Sprint(s1, s2, s3) fmt.Println(str2) \/\/ IamKJ fmt.Sprintln 儲存列印字串 \u002b 換行  相鄰變數會用空格串接，字串最後會加上換行符號\n s1 := \u0026#34;I\u0026#34; s2 := \u0026#34;am\u0026#34; s3 := \u0026#34;KJ\u0026#34; \/\/ 將字串格式化儲存 str1 := fmt.Sprintln(s1, s2, s3) fmt.Println(str1) \/\/ I am KJ  fmt.Sprintf 儲存列印格式化字串 name := `KJ` age := 18 introduction := fmt.Sprintf(\u0026#34;My name is %v. I\u0026#39;m %d years old\\n\u0026#34;, name, age) fmt.Printf(\u0026#34;Developer said: %s\u0026#34;, introduction) \/\/ Developer said: My name is KJ. I\u0026#39;m 18 years old 參考資料  fmt - The Go Programming Language Println vs Printf vs Print in Go - Stack Overflow Go 学习笔记（46）— Go 标准库之 fmt（输入\/输出格式化参数、Printf\/Fprintf\/Sprintf区别、Println\/Fprintln\/Sprintln 区别）_wohu1104的专栏-CSDN博客 # Day06 Go開教基本語法 (fmt) - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天  "
 	}
 </script>
 
@@ -348,6 +348,18 @@ if (!doNotTrack) {
 				<a class="nav-link" href="/question/" ><i class='fas fa-book'></i><span>常見問題</span></a>
 			</li>
 			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/leetcode/" ><i class='fas fa-book'></i><span>Leetcode</span></a>
+			</li>
+			
 			
 			
 		</ul>
@@ -363,7 +375,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.3841ac65bd082b92d2d8ca47cbac2840.json"
+  data-offline-search-index-json-src="/offline-search-index.fbbd833937c69efabab6f1e86afb523c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -399,7 +411,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.3841ac65bd082b92d2d8ca47cbac2840.json"
+  data-offline-search-index-json-src="/offline-search-index.fbbd833937c69efabab6f1e86afb523c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -558,6 +570,52 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typemap-li">
+    <a href="/basic/data-type/map/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typemap"><span class="">Map</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typeslice-li">
+    <a href="/basic/data-type/slice/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typeslice"><span class="">Map</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -580,8 +638,8 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-basicfor-loop-li">
-    <a href="/basic/for-loop/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-basicfor-loop"><span class="">迴圈</span></a>
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-basicloop-li">
+    <a href="/basic/loop/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-basicloop"><span class="">迴圈</span></a>
     
       
       <ul class="pr-md-3 ul-2">
@@ -602,8 +660,31 @@ if (!doNotTrack) {
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicfor-loopfor-li">
-    <a href="/basic/for-loop/for/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicfor-loopfor"><span class="">for</span></a>
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basiclooprange-li">
+    <a href="/basic/loop/range/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basiclooprange"><span class="">for range</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicloopfor-li">
+    <a href="/basic/loop/for/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicloopfor"><span class="">for</span></a>
     
   </li>
 
@@ -646,11 +727,18 @@ if (!doNotTrack) {
 <nav id="TableOfContents">
   <ul>
     <li><a href="#跳脫字元">跳脫字元</a></li>
-    <li><a href="#列印函數">列印函數</a>
+    <li><a href="#列印函數-print">列印函數 print</a>
       <ul>
         <li><a href="#fmtprint-列印">fmt.Print 列印</a></li>
         <li><a href="#fmtprintln-列印--換行">fmt.Println 列印 + 換行</a></li>
         <li><a href="#fmtprintf-格式化列印">fmt.Printf 格式化列印</a></li>
+      </ul>
+    </li>
+    <li><a href="#儲存列印字串-sprint">儲存列印字串 sprint</a>
+      <ul>
+        <li><a href="#fmtsprint-儲存列印字串">fmt.Sprint 儲存列印字串</a></li>
+        <li><a href="#fmtsprintln-儲存列印字串--換行">fmt.Sprintln 儲存列印字串 + 換行</a></li>
+        <li><a href="#fmtsprintf-儲存列印格式化字串">fmt.Sprintf 儲存列印格式化字串</a></li>
       </ul>
     </li>
     <li><a href="#參考資料">參考資料</a></li>
@@ -744,7 +832,7 @@ if (!doNotTrack) {
 <span style="color:#8f5902;font-style:italic">// 雙引號:可跳脫字元        
 </span><span style="color:#8f5902;font-style:italic">// 等
 </span><span style="color:#8f5902;font-style:italic">// 重音符:保留原始字串 \t \n 等
-</span></code></pre></div><h2 id="列印函數">列印函數</h2>
+</span></code></pre></div><h2 id="列印函數-print">列印函數 print</h2>
 <table>
 <thead>
 <tr>
@@ -789,9 +877,65 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">a</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">`KJ`</span>
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Printf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;a: %v type: %T\n&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">a</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">a</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#8f5902;font-style:italic">// a: KJ type: string
+</span></code></pre></div><h2 id="儲存列印字串-sprint">儲存列印字串 sprint</h2>
+<table>
+<thead>
+<tr>
+<th>類型</th>
+<th>說明</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fmt.str2</td>
+<td>儲存列印字串</td>
+<td>save print string</td>
+</tr>
+<tr>
+<td>fmt.Sprintln</td>
+<td>儲存列印字串 + 換行</td>
+<td>save print string + new line</td>
+</tr>
+<tr>
+<td>fmt.Sprintf</td>
+<td>儲存列印格式化字串(沒有換行)</td>
+<td>save format print string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fmtsprint-儲存列印字串">fmt.Sprint 儲存列印字串</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">s1</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">&#34;I&#34;</span>
+<span style="color:#000">s2</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">&#34;am&#34;</span>
+<span style="color:#000">s3</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span>
+
+<span style="color:#000">str2</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Sprint</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">s1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">s2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">s3</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">str2</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic">// IamKJ
+</span></code></pre></div><h3 id="fmtsprintln-儲存列印字串--換行">fmt.Sprintln 儲存列印字串 + 換行</h3>
+<blockquote>
+<p>相鄰變數會用空格串接，字串最後會加上換行符號</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">s1</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">&#34;I&#34;</span>
+<span style="color:#000">s2</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">&#34;am&#34;</span>
+<span style="color:#000">s3</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span>
+
+<span style="color:#8f5902;font-style:italic">// 將字串格式化儲存
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">str1</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Sprintln</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">s1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">s2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">s3</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">str1</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic">// I am KJ
+</span><span style="color:#8f5902;font-style:italic"></span>
+</code></pre></div><h3 id="fmtsprintf-儲存列印格式化字串">fmt.Sprintf 儲存列印格式化字串</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">name</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#4e9a06">`KJ`</span>
+<span style="color:#000">age</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#0000cf;font-weight:bold">18</span>
+<span style="color:#000">introduction</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Sprintf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;My name is %v. I&#39;m %d years old\n&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">name</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">age</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Printf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;Developer said: %s&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">introduction</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic">// Developer said: My name is KJ. I&#39;m 18 years old
 </span></code></pre></div><h2 id="參考資料">參考資料</h2>
 <ul>
 <li><a href="https://golang.org/pkg/fmt/">fmt - The Go Programming Language</a></li>
+<li><a href="https://stackoverflow.com/questions/53879154/println-vs-printf-vs-print-in-go">Println vs Printf vs Print in Go - Stack Overflow</a></li>
+<li><a href="https://blog.csdn.net/wohu1104/article/details/106433545">Go 学习笔记（46）— Go 标准库之 fmt（输入/输出格式化参数、Printf/Fprintf/Sprintf区别、Println/Fprintln/Sprintln 区别）_wohu1104的专栏-CSDN博客</a></li>
 <li><a href="https://ithelp.ithome.com.tw/articles/10235988"># Day06 Go開教基本語法 (fmt) - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天</a></li>
 </ul>
 
@@ -812,12 +956,18 @@ if (!doNotTrack) {
             
         
             
+        
+            
                 <div class="entry">
                     <h5>
                         <a href="/basic/print/format/">格式</a>
                     </h5>
                     <p>Golang 基礎: 列印格式</p>
                 </div>
+            
+        
+            
+        
             
         
             
