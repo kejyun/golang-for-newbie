@@ -37,6 +37,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/basic/data-type/array/</loc>
+    <lastmod>2021-05-10T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://golang-for-newbie.kejyun.com/basic/</loc>
     <lastmod>2021-05-10T08:50:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -47,8 +52,8 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://golang-for-newbie.kejyun.com/basic/data-type/array/</loc>
-    <lastmod>2021-05-10T08:50:29+08:00</lastmod>
+    <loc>https://golang-for-newbie.kejyun.com/basic/data-type/slice/</loc>
+    <lastmod>2021-05-11T08:50:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -69,11 +74,6 @@
   </url><url>
     <loc>https://golang-for-newbie.kejyun.com/basic/loop/</loc>
     <lastmod>2021-05-10T08:50:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://golang-for-newbie.kejyun.com/basic/data-type/slice/</loc>
-    <lastmod>2021-05-11T08:50:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
