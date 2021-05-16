@@ -27,7 +27,7 @@
 <meta itemprop="name" content="0001 - Two Sum">
 <meta itemprop="description" content="Golang Leetcode 問題: 0001 - Two Sum"><meta itemprop="datePublished" content="2021-05-11T08:50:29&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-11T08:50:29&#43;08:00" />
-<meta itemprop="wordCount" content="223"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="227"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,Leetcode,問題,0001 - Two Sum," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -198,7 +198,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "題目 傳入 數字列表 及 最後答案加總數值，回傳 最後答案加總數值 是 數字列表 的第幾個跟第幾個數字的加總\n答案 func twoSum(nums_list []int, final_sum_value int) []int { \/\/ 數字反向對應表 \tnum_reverse_mapping := make(map[int]int) for key, value := range nums_list { \/\/ 判斷是否其他數值存在 \tif other_value_key, is_other_value_exist := num_reverse_mapping[final_sum_value-value]; is_other_value_exist { \/\/ 回傳其他數值鍵值 \u002b 目前數值鍵值 \treturn []int{other_value_key, key} } \/\/ 設定數值反向對應表：數值 =\u0026gt; 鍵值 \tnum_reverse_mapping[value] = key } return nil } 完整程式碼 package main import ( \u0026#34;fmt\u0026#34; ) type question struct { \/\/ 參數 \tparameter \/\/ 答案 \tanswer } \/\/ 參數 type parameter struct { nums_list []int final_sum_value int } \/\/ 答案 type answer struct { one []int } func main() { question_list := []question{ { parameter{[]int{3, 2, 4}, 6}, answer{[]int{1, 2}}, }, { parameter{[]int{3, 2, 4}, 5}, answer{[]int{0, 1}}, }, { parameter{[]int{0, 8, 7, 3, 3, 4, 2}, 11}, answer{[]int{1, 3}}, }, { parameter{[]int{0, 1}, 1}, answer{[]int{0, 1}}, }, { parameter{[]int{0, 3}, 5}, answer{[]int{}}, }, } fmt.Printf(\u0026#34;------------------------Leetcode Problem 1------------------------\\n\u0026#34;) for _, question := range question_list { \/\/ _, p := question.answer, question.parameter \tparam := question.parameter fmt.Printf(\u0026#34;【input】:%v 【output】:%v\\n\u0026#34;, param, twoSum(param.nums_list, param.final_sum_value)) } } func twoSum(nums_list []int, final_sum_value int) []int { \/\/ 數字反向對應表 \tnum_reverse_mapping := make(map[int]int) for key, value := range nums_list { \/\/ 判斷是否其他數值存在 \tif other_value_key, is_other_value_exist := num_reverse_mapping[final_sum_value-value]; is_other_value_exist { \/\/ 回傳其他數值鍵值 \u002b 目前數值鍵值 \treturn []int{other_value_key, key} } \/\/ 設定數值反向對應表：數值 =\u0026gt; 鍵值 \tnum_reverse_mapping[value] = key } return nil } 參考資料  0001. Two Sum | LeetCode Cookbook  "
+		"articleBody": "題目 傳入 數字列表 及 最後答案加總數值，回傳 最後答案加總數值 是 數字列表 的第幾個跟第幾個數字的加總\n答案 func twoSum(nums_list []int, final_sum_value int) []int { \/\/ 數字反向對應表 \tnum_reverse_mapping := make(map[int]int) for key, value := range nums_list { \/\/ 判斷是否其他數值存在 \tif other_value_key, is_other_value_exist := num_reverse_mapping[final_sum_value-value]; is_other_value_exist { \/\/ 回傳其他數值鍵值 \u002b 目前數值鍵值 \treturn []int{other_value_key, key} } \/\/ 設定數值反向對應表：數值 =\u0026gt; 鍵值 \tnum_reverse_mapping[value] = key } return nil } 完整程式碼 package main import ( \u0026#34;fmt\u0026#34; ) type question struct { \/\/ 參數 \tparameter \/\/ 答案 \tanswer } \/\/ 參數 type parameter struct { nums_list []int final_sum_value int } \/\/ 答案 type answer struct { one []int } func main() { question_list := []question{ { parameter{[]int{3, 2, 4}, 6}, answer{[]int{1, 2}}, }, { parameter{[]int{3, 2, 4}, 5}, answer{[]int{0, 1}}, }, { parameter{[]int{0, 8, 7, 3, 3, 4, 2}, 11}, answer{[]int{1, 3}}, }, { parameter{[]int{0, 1}, 1}, answer{[]int{0, 1}}, }, { parameter{[]int{0, 3}, 5}, answer{[]int{}}, }, } fmt.Printf(\u0026#34;------------------------Leetcode Problem 1------------------------\\n\u0026#34;) for _, question := range question_list { \/\/ _, p := question.answer, question.parameter \tparam := question.parameter fmt.Printf(\u0026#34;【input】:%v 【output】:%v\\n\u0026#34;, param, twoSum(param.nums_list, param.final_sum_value)) } } func twoSum(nums_list []int, final_sum_value int) []int { \/\/ 數字反向對應表 \tnum_reverse_mapping := make(map[int]int) for key, value := range nums_list { \/\/ 判斷是否其他數值存在 \tif other_value_key, is_other_value_exist := num_reverse_mapping[final_sum_value-value]; is_other_value_exist { \/\/ 回傳其他數值鍵值 \u002b 目前數值鍵值 \treturn []int{other_value_key, key} } \/\/ 設定數值反向對應表：數值 =\u0026gt; 鍵值 \tnum_reverse_mapping[value] = key } return nil } 參考資料  Two Sum - LeetCode 0001. Two Sum | LeetCode Cookbook  "
 	}
 </script>
 
@@ -648,7 +648,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1b6567b4698e8ffe682e6ad303e17457.json"
+  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -684,7 +684,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1b6567b4698e8ffe682e6ad303e17457.json"
+  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -786,6 +786,80 @@ if (!doNotTrack) {
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-leetcodequestion0001-01000001-two-sum-li">
     <a href="/leetcode/question/0001-0100/0001-two-sum/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__page" id="m-leetcodequestion0001-01000001-two-sum"><span class="td-sidebar-nav-active-item">0001 - Two Sum</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-leetcodequestion0101-0200-li">
+    <a href="/leetcode/question/0101-0200/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-leetcodequestion0101-0200"><span class="">0101~0200</span></a>
+    
+      
+      <ul class="pr-md-3 ul-3">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-leetcodequestion0101-02000175-combine-two-table-li">
+    <a href="/leetcode/question/0101-0200/0175-combine-two-table/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-leetcodequestion0101-02000175-combine-two-table"><span class="">0175 - Combine Two Table</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-leetcodequestion0101-02000176-second-highest-salary-li">
+    <a href="/leetcode/question/0101-0200/0176-second-highest-salary/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-leetcodequestion0101-02000176-second-highest-salary"><span class="">0176 - Second Highest Salary</span></a>
     
   </li>
 
@@ -1014,6 +1088,7 @@ if (!doNotTrack) {
 <span style="color:#000;font-weight:bold">}</span>
 </code></pre></div><h2 id="參考資料">參考資料</h2>
 <ul>
+<li><a href="https://leetcode.com/problems/two-sum/">Two Sum - LeetCode</a></li>
 <li><a href="https://books.halfrost.com/leetcode/ChapterFour/0001~0099/0001.Two-Sum/">0001. Two Sum | LeetCode Cookbook</a></li>
 </ul>
 

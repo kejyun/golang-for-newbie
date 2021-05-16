@@ -5,7 +5,7 @@
     <description>Recent content in Leetcode on Golang 菜雞修煉場</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 11 May 2021 08:50:29 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 May 2021 08:50:29 +0800</lastBuildDate>
     
 	  <atom:link href="https://golang-for-newbie.kejyun.com/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
@@ -119,6 +119,7 @@
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum/&#34;&gt;Two Sum - LeetCode&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://books.halfrost.com/leetcode/ChapterFour/0001~0099/0001.Two-Sum/&#34;&gt;0001. Two Sum | LeetCode Cookbook&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -135,6 +136,148 @@
         
         
         
+      </description>
+    </item>
+    
+    <item>
+      <title>Leetcode: 0101~0200</title>
+      <link>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/</link>
+      <pubDate>Tue, 11 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Leetcode: 0175 - Combine Two Table</title>
+      <link>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/0175-combine-two-table/</link>
+      <pubDate>Wed, 12 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/0175-combine-two-table/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;題目&#34;&gt;題目&lt;/h2&gt;
+&lt;p&gt;有 &lt;code&gt;Person&lt;/code&gt; 及 &lt;code&gt;Address&lt;/code&gt; 資料表，&lt;code&gt;Person&lt;/code&gt; 不一定會有 &lt;code&gt;Address&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在不管有沒有 &lt;code&gt;Address&lt;/code&gt; 的條件撈取出 &lt;code&gt;FirstName&lt;/code&gt;,&lt;code&gt;LastName&lt;/code&gt;, &lt;code&gt;City&lt;/code&gt;, &lt;code&gt;State&lt;/code&gt; 欄位資料&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Person 資料表&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column Name&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;PersonId&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FirstName&lt;/td&gt;
+&lt;td&gt;varchar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LastName&lt;/td&gt;
+&lt;td&gt;varchar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;Address 資料表&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column Name&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;AddressId&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PersonId&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;City&lt;/td&gt;
+&lt;td&gt;varchar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;State&lt;/td&gt;
+&lt;td&gt;varchar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;答案&#34;&gt;答案&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;Write&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MySQL&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;query&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;statement&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;below&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FirstName&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;LastName&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;City&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;State&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Person&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;LEFT&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;JOIN&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Address&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ON&lt;/span&gt;
+    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Person&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;PersonId&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Address&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;PersonId&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://leetcode.com/problems/combine-two-tables/&#34;&gt;Combine Two Tables - LeetCode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Leetcode: 0176 - Second Highest Salary</title>
+      <link>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/0176-second-highest-salary/</link>
+      <pubDate>Wed, 12 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/0176-second-highest-salary/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;題目&#34;&gt;題目&lt;/h2&gt;
+&lt;p&gt;找出 &lt;code&gt;Employee&lt;/code&gt; 資料表第二高薪的薪水&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若沒有第二高薪水的話則回傳 null&lt;/li&gt;
+&lt;li&gt;若第一高有兩個人，薪水一樣高，但沒其他人了，則第二高為 null&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Employee 資料表&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Id&lt;/th&gt;
+&lt;th&gt;Salary&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;Write&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MySQL&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;query&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;statement&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;below&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;SELECT&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;DISTINCT&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Salary&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Employee&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Salary&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;DESC&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;OFFSET&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SecondHighestSalary&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     

@@ -126,7 +126,11 @@
 &lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Println&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;slice_employee_list:&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;slice_employee_list&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// employee_list: [KJ Kay Jay Musk Bill Jim]
 &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// slice_employee_list: [Jay Musk Bill Jim]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/slices&#34;&gt;Go by Example: Slices&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     

@@ -27,7 +27,7 @@
 <meta itemprop="name" content="Map 變數: key-value 陣列">
 <meta itemprop="description" content="Golang 基礎: Map 變數: key-value 陣列"><meta itemprop="datePublished" content="2021-05-11T08:50:29&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-11T08:50:29&#43;08:00" />
-<meta itemprop="wordCount" content="121"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="126"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,Map 變數,key-value 陣列," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -198,7 +198,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "建立 Map 變數 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_1:7 key_2:13] 取得 Map 鍵值資料 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 v1 := m[\u0026#34;key_1\u0026#34;] fmt.Println(\u0026#34;v1: \u0026#34;, v1) \/\/ v1: 7 Map 資料數量 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;len:\u0026#34;, len(m)) \/\/ len: 2 刪除 Map 指定鍵值資料 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_1:7 key_2:13]  delete(m, \u0026#34;key_1\u0026#34;) fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_2:13] 判斷鍵值是否存在 僅需要判斷資料是否存在，沒有需要使用該數值的話，可以將第一個參數設定為 底線 _，用第二個變數來判斷是否存在\nm := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 _, is_key2_exist := m[\u0026#34;key_2\u0026#34;] _, is_key3_exist := m[\u0026#34;key_3\u0026#34;] fmt.Println(\u0026#34;is_key2_exist:\u0026#34;, is_key2_exist) fmt.Println(\u0026#34;is_key3_exist:\u0026#34;, is_key3_exist) \/\/ is_key2_exist: true \/\/ is_key3_exist: false 直接指定數值 m := map[string]string{\u0026#34;name\u0026#34;: `KJ`, \u0026#34;age\u0026#34;: `18`} fmt.Println(\u0026#34;developer:\u0026#34;, m) \/\/ developer: map[age:18 name:KJ] "
+		"articleBody": "建立 Map 變數 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_1:7 key_2:13] 取得 Map 鍵值資料 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 v1 := m[\u0026#34;key_1\u0026#34;] fmt.Println(\u0026#34;v1: \u0026#34;, v1) \/\/ v1: 7 Map 資料數量 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;len:\u0026#34;, len(m)) \/\/ len: 2 刪除 Map 指定鍵值資料 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_1:7 key_2:13]  delete(m, \u0026#34;key_1\u0026#34;) fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_2:13] 判斷鍵值是否存在 僅需要判斷資料是否存在，沒有需要使用該數值的話，可以將第一個參數設定為 底線 _，用第二個變數來判斷是否存在\nm := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 _, is_key2_exist := m[\u0026#34;key_2\u0026#34;] _, is_key3_exist := m[\u0026#34;key_3\u0026#34;] fmt.Println(\u0026#34;is_key2_exist:\u0026#34;, is_key2_exist) fmt.Println(\u0026#34;is_key3_exist:\u0026#34;, is_key3_exist) \/\/ is_key2_exist: true \/\/ is_key3_exist: false 直接指定數值 m := map[string]string{\u0026#34;name\u0026#34;: `KJ`, \u0026#34;age\u0026#34;: `18`} fmt.Println(\u0026#34;developer:\u0026#34;, m) \/\/ developer: map[age:18 name:KJ] 參考資料  Go by Example: Maps  "
 	}
 </script>
 
@@ -625,7 +625,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1b6567b4698e8ffe682e6ad303e17457.json"
+  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -661,7 +661,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1b6567b4698e8ffe682e6ad303e17457.json"
+  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -866,6 +866,29 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typelinked-list-li">
+    <a href="/basic/data-type/linked-list/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typelinked-list"><span class="">Linked list 鏈表</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -982,6 +1005,7 @@ if (!doNotTrack) {
     <li><a href="#刪除-map-指定鍵值資料">刪除 Map 指定鍵值資料</a></li>
     <li><a href="#判斷鍵值是否存在">判斷鍵值是否存在</a></li>
     <li><a href="#直接指定數值">直接指定數值</a></li>
+    <li><a href="#參考資料">參考資料</a></li>
   </ul>
 </nav>
 
@@ -1100,7 +1124,11 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">m</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87;font-weight:bold">map</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">`KJ`</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;age&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">`18`</span><span style="color:#000;font-weight:bold">}</span>
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;developer:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">m</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#8f5902;font-style:italic">// developer: map[age:18 name:KJ]
-</span></code></pre></div>
+</span></code></pre></div><h2 id="參考資料">參考資料</h2>
+<ul>
+<li><a href="https://gobyexample.com/maps">Go by Example: Maps</a></li>
+</ul>
+
 
 		
 		

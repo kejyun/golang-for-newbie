@@ -1,0 +1,72 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang 菜雞修煉場 – 0176 - Second Highest Salary</title>
+    <link>https://golang-for-newbie.kejyun.com/categories/0176-second-highest-salary/</link>
+    <description>Recent content in 0176 - Second Highest Salary on Golang 菜雞修煉場</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 12 May 2021 08:50:29 +0800</lastBuildDate>
+    
+	  <atom:link href="https://golang-for-newbie.kejyun.com/categories/0176-second-highest-salary/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Leetcode: 0176 - Second Highest Salary</title>
+      <link>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/0176-second-highest-salary/</link>
+      <pubDate>Wed, 12 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/0176-second-highest-salary/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;題目&#34;&gt;題目&lt;/h2&gt;
+&lt;p&gt;找出 &lt;code&gt;Employee&lt;/code&gt; 資料表第二高薪的薪水&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若沒有第二高薪水的話則回傳 null&lt;/li&gt;
+&lt;li&gt;若第一高有兩個人，薪水一樣高，但沒其他人了，則第二高為 null&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Employee 資料表&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Id&lt;/th&gt;
+&lt;th&gt;Salary&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;Write&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MySQL&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;query&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;statement&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;below&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;SELECT&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;DISTINCT&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Salary&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Employee&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Salary&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;DESC&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;OFFSET&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SecondHighestSalary&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

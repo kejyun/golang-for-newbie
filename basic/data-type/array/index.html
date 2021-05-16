@@ -27,7 +27,7 @@
 <meta itemprop="name" content="Array 陣列">
 <meta itemprop="description" content="Golang 基礎: 陣列變數"><meta itemprop="datePublished" content="2021-05-10T08:50:29&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-10T08:50:29&#43;08:00" />
-<meta itemprop="wordCount" content="165"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="170"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,陣列變數," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -195,7 +195,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "陣列 指定陣列大小 var arr [5]int arr[0] = 1 arr[1] = 2 arr[4] = 5 fmt.Println(arr) \/\/ [1 2 0 0 5] arr := [5]int{1, 2, 3} fmt.Println(arr) \/\/ [1 2 3 0 0] 不指定陣列大小 arr := [...]int{1, 2, 3, 4, 5} fmt.Println(arr) \/\/ [1 2 3 4 5] 巢狀陣列 var arr [3][2]int fmt.Println(arr) \/\/ [[0 0] [0 0] [0 0]] 指定巢狀陣列預設值 arr1 := [3][2]int{{1, 2}, {3, 4}, {5, 6}} fmt.Println(arr1) \/\/ [[1 2] [3 4] [5 6]]  arr2 := [...][2]int{{1, 2}, {3, 4}, {5, 6}} fmt.Println(arr2) \/\/ [[1 2] [3 4] [5 6]] 複製陣列 限制陣列長度 arr := [5]int{1, 2, 3, 4, 5} \/\/ 指定要複製的陣列 var arr_copy [5]int arr_copy = arr arr_copy[3] = 99 fmt.Println(arr) \/\/ [1 2 3 4 5] fmt.Println(arr_copy) \/\/ [1 2 3 99 5] 不限制陣列長度  複製的陣列會變成傳址的方式\n arr := []int{1, 2, 3, 4, 5, 6, 7} var arr_copy []int arr_copy = arr arr_copy[3] = 99 fmt.Println(arr) \/\/ [1 2 3 99 5 6 7] fmt.Println(arr_copy) \/\/ [1 2 3 99 5 6 7] "
+		"articleBody": "陣列 指定陣列大小 var arr [5]int arr[0] = 1 arr[1] = 2 arr[4] = 5 fmt.Println(arr) \/\/ [1 2 0 0 5] arr := [5]int{1, 2, 3} fmt.Println(arr) \/\/ [1 2 3 0 0] 不指定陣列大小 arr := [...]int{1, 2, 3, 4, 5} fmt.Println(arr) \/\/ [1 2 3 4 5] 巢狀陣列 var arr [3][2]int fmt.Println(arr) \/\/ [[0 0] [0 0] [0 0]] 指定巢狀陣列預設值 arr1 := [3][2]int{{1, 2}, {3, 4}, {5, 6}} fmt.Println(arr1) \/\/ [[1 2] [3 4] [5 6]]  arr2 := [...][2]int{{1, 2}, {3, 4}, {5, 6}} fmt.Println(arr2) \/\/ [[1 2] [3 4] [5 6]] 複製陣列 限制陣列長度 arr := [5]int{1, 2, 3, 4, 5} \/\/ 指定要複製的陣列 var arr_copy [5]int arr_copy = arr arr_copy[3] = 99 fmt.Println(arr) \/\/ [1 2 3 4 5] fmt.Println(arr_copy) \/\/ [1 2 3 99 5] 不限制陣列長度  複製的陣列會變成傳址的方式\n arr := []int{1, 2, 3, 4, 5, 6, 7} var arr_copy []int arr_copy = arr arr_copy[3] = 99 fmt.Println(arr) \/\/ [1 2 3 99 5 6 7] fmt.Println(arr_copy) \/\/ [1 2 3 99 5 6 7] 參考資料  Go by Example: Arrays  "
 	}
 </script>
 
@@ -622,7 +622,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1b6567b4698e8ffe682e6ad303e17457.json"
+  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -658,7 +658,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1b6567b4698e8ffe682e6ad303e17457.json"
+  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -863,6 +863,29 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typelinked-list-li">
+    <a href="/basic/data-type/linked-list/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typelinked-list"><span class="">Linked list 鏈表</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -990,6 +1013,7 @@ if (!doNotTrack) {
         <li><a href="#不限制陣列長度">不限制陣列長度</a></li>
       </ul>
     </li>
+    <li><a href="#參考資料">參考資料</a></li>
   </ul>
 </nav>
 
@@ -1112,7 +1136,11 @@ if (!doNotTrack) {
 
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr</span><span style="color:#000;font-weight:bold">)</span>      <span style="color:#8f5902;font-style:italic">// [1 2 3 99 5 6 7]
 </span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arr_copy</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#8f5902;font-style:italic">// [1 2 3 99 5 6 7]
-</span></code></pre></div>
+</span></code></pre></div><h2 id="參考資料">參考資料</h2>
+<ul>
+<li><a href="https://gobyexample.com/arrays">Go by Example: Arrays</a></li>
+</ul>
+
 
 		
 		

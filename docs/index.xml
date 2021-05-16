@@ -119,6 +119,7 @@
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum/&#34;&gt;Two Sum - LeetCode&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://books.halfrost.com/leetcode/ChapterFour/0001~0099/0001.Two-Sum/&#34;&gt;0001. Two Sum | LeetCode Cookbook&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -266,7 +267,12 @@
 	&lt;span style=&#34;color:#000&#34;&gt;AUTHOR&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;KJ&amp;#34;&lt;/span&gt;
 	&lt;span style=&#34;color:#000&#34;&gt;AGE&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;18&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/variables&#34;&gt;Go by Example: Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/constants&#34;&gt;Go by Example: Constants&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     
@@ -563,7 +569,11 @@
 
 &lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Println&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;arr&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;      &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// [1 2 3 99 5 6 7]
 &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Println&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;arr_copy&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// [1 2 3 99 5 6 7]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/arrays&#34;&gt;Go by Example: Arrays&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     
@@ -678,7 +688,11 @@
 &lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Println&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;slice_employee_list:&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;slice_employee_list&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// employee_list: [KJ Kay Jay Musk Bill Jim]
 &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// slice_employee_list: [Jay Musk Bill Jim]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/slices&#34;&gt;Go by Example: Slices&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     
@@ -737,7 +751,11 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;m&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;map&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;`KJ`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;age&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;`18`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Println&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;developer:&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;m&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// developer: map[age:18 name:KJ]
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/maps&#34;&gt;Go by Example: Maps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     
@@ -838,6 +856,205 @@
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/questions/18963984/exit-with-error-code-in-go&#34;&gt;Exit with error code in go? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Basic: Linked list 變數: 鏈表</title>
+      <link>https://golang-for-newbie.kejyun.com/basic/data-type/linked-list/</link>
+      <pubDate>Thu, 13 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://golang-for-newbie.kejyun.com/basic/data-type/linked-list/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;main&lt;/span&gt;
+
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;
+	&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Developer&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#000&#34;&gt;name&lt;/span&gt;          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 姓名
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#000&#34;&gt;age&lt;/span&gt;           &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;int&lt;/span&gt;    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 年齡
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#000&#34;&gt;NextDeveloper&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Developer&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 第 1 位工程師節點
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;FirstDeveloper&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Developer&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Developer&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;KJ&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#000&#34;&gt;age&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;17&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+
+	&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 第 2 位工程師節點
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;SecondDeveloper&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Developer&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Developer&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#000&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Kay&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#000&#34;&gt;age&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;19&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+
+	&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 第 3 位工程師節點
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ThirdDeveloper&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Developer&lt;/span&gt;
+	&lt;span style=&#34;color:#000&#34;&gt;ThirdDeveloper&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;`Jay`&lt;/span&gt;
+	&lt;span style=&#34;color:#000&#34;&gt;ThirdDeveloper&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;age&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;23&lt;/span&gt;
+
+	&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 插入「第 2 位工程師節點位址」到「第 1 位工程師節點」的 NextDeveloper 變數中
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#000&#34;&gt;FirstDeveloper&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;NextDeveloper&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;SecondDeveloper&lt;/span&gt;
+	&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 插入「第 3 位工程師節點位址」到「第 2 位工程師節點」的 NextDeveloper 變數中
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#000&#34;&gt;SecondDeveloper&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;NextDeveloper&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ThirdDeveloper&lt;/span&gt;
+
+	&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 建立變數，搜尋節點資訊，並指向「第 1 位工程師節點」
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#000&#34;&gt;SearchDeveloper&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;FirstDeveloper&lt;/span&gt;
+
+	&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 只要搜尋的節點中的資訊不為空，就會列印節點資訊
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;SearchDeveloper&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nil&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// fmt.Println(*SearchDeveloper)
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;		&lt;span style=&#34;color:#000&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Printf&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Developer: %+v\n&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;SearchDeveloper&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+
+		&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;//將欲查看的下個節點 指向 已查看完節點的Next字段
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;		&lt;span style=&#34;color:#000&#34;&gt;SearchDeveloper&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;SearchDeveloper&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;NextDeveloper&lt;/span&gt;
+	&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// Developer: &amp;amp;{name:KJ age:17 NextDeveloper:0xc0000b8020}
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// Developer: &amp;amp;{name:Kay age:19 NextDeveloper:0xc0000b8040}
+&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// Developer: &amp;amp;{name:Jay age:23 NextDeveloper:&amp;lt;nil&amp;gt;}
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.golangprograms.com/golang-program-for-implementation-of-linked-list.html&#34;&gt;Linked List in Go (Golang) - golangprograms.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/pointers&#34;&gt;Go by Example: Pointers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.taroballz.com/2018/04/05/Go_linklist/&#34;&gt;Golang資料結構-day14-鏈表(Linked list) | Taroballz StudyNotes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Leetcode: 0175 - Combine Two Table</title>
+      <link>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/0175-combine-two-table/</link>
+      <pubDate>Wed, 12 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/0175-combine-two-table/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;題目&#34;&gt;題目&lt;/h2&gt;
+&lt;p&gt;有 &lt;code&gt;Person&lt;/code&gt; 及 &lt;code&gt;Address&lt;/code&gt; 資料表，&lt;code&gt;Person&lt;/code&gt; 不一定會有 &lt;code&gt;Address&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在不管有沒有 &lt;code&gt;Address&lt;/code&gt; 的條件撈取出 &lt;code&gt;FirstName&lt;/code&gt;,&lt;code&gt;LastName&lt;/code&gt;, &lt;code&gt;City&lt;/code&gt;, &lt;code&gt;State&lt;/code&gt; 欄位資料&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Person 資料表&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column Name&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;PersonId&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FirstName&lt;/td&gt;
+&lt;td&gt;varchar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LastName&lt;/td&gt;
+&lt;td&gt;varchar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;Address 資料表&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Column Name&lt;/th&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;AddressId&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PersonId&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;City&lt;/td&gt;
+&lt;td&gt;varchar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;State&lt;/td&gt;
+&lt;td&gt;varchar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;答案&#34;&gt;答案&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;Write&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MySQL&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;query&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;statement&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;below&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FirstName&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;LastName&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;City&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;State&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Person&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;LEFT&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;JOIN&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Address&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ON&lt;/span&gt;
+    &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Person&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;PersonId&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Address&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;PersonId&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://leetcode.com/problems/combine-two-tables/&#34;&gt;Combine Two Tables - LeetCode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Leetcode: 0176 - Second Highest Salary</title>
+      <link>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/0176-second-highest-salary/</link>
+      <pubDate>Wed, 12 May 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/0176-second-highest-salary/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;題目&#34;&gt;題目&lt;/h2&gt;
+&lt;p&gt;找出 &lt;code&gt;Employee&lt;/code&gt; 資料表第二高薪的薪水&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若沒有第二高薪水的話則回傳 null&lt;/li&gt;
+&lt;li&gt;若第一高有兩個人，薪水一樣高，但沒其他人了，則第二高為 null&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Employee 資料表&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Id&lt;/th&gt;
+&lt;th&gt;Salary&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;Write&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;MySQL&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;query&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;statement&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;below&lt;/span&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;SELECT&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;DISTINCT&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Salary&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Employee&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;Salary&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;DESC&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;LIMIT&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;OFFSET&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;SecondHighestSalary&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     

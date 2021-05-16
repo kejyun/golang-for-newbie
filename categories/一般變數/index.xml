@@ -76,7 +76,12 @@
 	&lt;span style=&#34;color:#000&#34;&gt;AUTHOR&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;KJ&amp;#34;&lt;/span&gt;
 	&lt;span style=&#34;color:#000&#34;&gt;AGE&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;18&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/variables&#34;&gt;Go by Example: Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gobyexample.com/constants&#34;&gt;Go by Example: Constants&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     

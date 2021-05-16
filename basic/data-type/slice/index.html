@@ -27,7 +27,7 @@
 <meta itemprop="name" content="Slice 變數: 進階陣列">
 <meta itemprop="description" content="Golang 基礎: Slice 變數: 進階陣列"><meta itemprop="datePublished" content="2021-05-11T08:50:29&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-11T08:50:29&#43;08:00" />
-<meta itemprop="wordCount" content="322"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="327"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,Slice 變數,進階陣列," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -198,7 +198,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "建立 slice 變數 employee_list := make([]string, 3) fmt.Println(\u0026#34;empty employee_list:\u0026#34;, employee_list) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;3rd employee:\u0026#34;, employee_list[2]) \/\/ empty employee_list: [ ] \/\/ all employee: [KJ Kay Jay] \/\/ 3rd employee: Jay employee_list := []string{\u0026#34;KJ\u0026#34;, \u0026#34;Kay\u0026#34;, \u0026#34;Jay\u0026#34;} fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) \/\/ all employee: [KJ Kay Jay] var employee_list []string employee_list = append(employee_list, \u0026#34;KJ\u0026#34;) employee_list = append(employee_list, \u0026#34;Kay\u0026#34;) employee_list = append(employee_list, \u0026#34;Jay\u0026#34;) fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;3rd employee:\u0026#34;, employee_list[2]) \/\/ all employee: [KJ Kay Jay] \/\/ 3rd employee: Jay slice 資料數量 employee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; fmt.Println(\u0026#34;len:\u0026#34;, len(employee_list)) \/\/ len: 3 加入 slice 資料 employee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; employee_list = append(employee_list, \u0026#34;Musk\u0026#34;) employee_list = append(employee_list, \u0026#34;Bill\u0026#34;, \u0026#34;Jim\u0026#34;) fmt.Println(\u0026#34;all employee after append:\u0026#34;, employee_list) \/\/ all employee after append: [KJ Kay Jay Musk Bill Jim] 複製 slice 變數  複製的 slice 變數是傳值的方式，所以複製變數的異動不會影響先前的 slice 變數\n employee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; \/\/ 複製 slice 變數 copy_employee_list := make([]string, len(employee_list)) copy(copy_employee_list, employee_list) fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;all copy employee:\u0026#34;, copy_employee_list) \/\/ all employee: [KJ Kay Jay] \/\/ all copy employee: [KJ Kay Jay]  \/\/ 變更複製的 slice copy_employee_list[2] = \u0026#34;Change Name\u0026#34; fmt.Println(\u0026#34;all employee after change:\u0026#34;, employee_list) fmt.Println(\u0026#34;all copy employee after change:\u0026#34;, copy_employee_list) \/\/ all employee after change: [KJ Kay Jay] \/\/ all copy employee after change: [KJ Kay Change Name] 取得指定 slice 範圍的變數 employee_list := make([]string, 6) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; employee_list[3] = \u0026#34;Musk\u0026#34; employee_list[4] = \u0026#34;Bill\u0026#34; employee_list[5] = \u0026#34;Jim\u0026#34;  slice[\u0026lt;從第幾個元素\u0026gt;:\u0026lt;到第幾個元素(不含此元素)\u0026gt;]\n slice_employee_list := employee_list[2:5] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [Jay Musk Bill]   slice[:\u0026lt;到第幾個元素(不含此元素)\u0026gt;]\n slice_employee_list := employee_list[:3] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [KJ Kay Jay]  slice[\u0026lt;從第幾個元素\u0026gt;:]\n slice_employee_list := employee_list[2:] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [Jay Musk Bill Jim] "
+		"articleBody": "建立 slice 變數 employee_list := make([]string, 3) fmt.Println(\u0026#34;empty employee_list:\u0026#34;, employee_list) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;3rd employee:\u0026#34;, employee_list[2]) \/\/ empty employee_list: [ ] \/\/ all employee: [KJ Kay Jay] \/\/ 3rd employee: Jay employee_list := []string{\u0026#34;KJ\u0026#34;, \u0026#34;Kay\u0026#34;, \u0026#34;Jay\u0026#34;} fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) \/\/ all employee: [KJ Kay Jay] var employee_list []string employee_list = append(employee_list, \u0026#34;KJ\u0026#34;) employee_list = append(employee_list, \u0026#34;Kay\u0026#34;) employee_list = append(employee_list, \u0026#34;Jay\u0026#34;) fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;3rd employee:\u0026#34;, employee_list[2]) \/\/ all employee: [KJ Kay Jay] \/\/ 3rd employee: Jay slice 資料數量 employee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; fmt.Println(\u0026#34;len:\u0026#34;, len(employee_list)) \/\/ len: 3 加入 slice 資料 employee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; employee_list = append(employee_list, \u0026#34;Musk\u0026#34;) employee_list = append(employee_list, \u0026#34;Bill\u0026#34;, \u0026#34;Jim\u0026#34;) fmt.Println(\u0026#34;all employee after append:\u0026#34;, employee_list) \/\/ all employee after append: [KJ Kay Jay Musk Bill Jim] 複製 slice 變數  複製的 slice 變數是傳值的方式，所以複製變數的異動不會影響先前的 slice 變數\n employee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; \/\/ 複製 slice 變數 copy_employee_list := make([]string, len(employee_list)) copy(copy_employee_list, employee_list) fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;all copy employee:\u0026#34;, copy_employee_list) \/\/ all employee: [KJ Kay Jay] \/\/ all copy employee: [KJ Kay Jay]  \/\/ 變更複製的 slice copy_employee_list[2] = \u0026#34;Change Name\u0026#34; fmt.Println(\u0026#34;all employee after change:\u0026#34;, employee_list) fmt.Println(\u0026#34;all copy employee after change:\u0026#34;, copy_employee_list) \/\/ all employee after change: [KJ Kay Jay] \/\/ all copy employee after change: [KJ Kay Change Name] 取得指定 slice 範圍的變數 employee_list := make([]string, 6) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; employee_list[3] = \u0026#34;Musk\u0026#34; employee_list[4] = \u0026#34;Bill\u0026#34; employee_list[5] = \u0026#34;Jim\u0026#34;  slice[\u0026lt;從第幾個元素\u0026gt;:\u0026lt;到第幾個元素(不含此元素)\u0026gt;]\n slice_employee_list := employee_list[2:5] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [Jay Musk Bill]   slice[:\u0026lt;到第幾個元素(不含此元素)\u0026gt;]\n slice_employee_list := employee_list[:3] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [KJ Kay Jay]  slice[\u0026lt;從第幾個元素\u0026gt;:]\n slice_employee_list := employee_list[2:] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [Jay Musk Bill Jim] 參考資料  Go by Example: Slices  "
 	}
 </script>
 
@@ -625,7 +625,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1b6567b4698e8ffe682e6ad303e17457.json"
+  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -661,7 +661,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1b6567b4698e8ffe682e6ad303e17457.json"
+  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -866,6 +866,29 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typelinked-list-li">
+    <a href="/basic/data-type/linked-list/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typelinked-list"><span class="">Linked list 鏈表</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -981,6 +1004,7 @@ if (!doNotTrack) {
     <li><a href="#加入-slice-資料">加入 slice 資料</a></li>
     <li><a href="#複製-slice-變數">複製 slice 變數</a></li>
     <li><a href="#取得指定-slice-範圍的變數">取得指定 slice 範圍的變數</a></li>
+    <li><a href="#參考資料">參考資料</a></li>
   </ul>
 </nav>
 
@@ -1155,7 +1179,11 @@ if (!doNotTrack) {
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;slice_employee_list:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">slice_employee_list</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#8f5902;font-style:italic">// employee_list: [KJ Kay Jay Musk Bill Jim]
 </span><span style="color:#8f5902;font-style:italic">// slice_employee_list: [Jay Musk Bill Jim]
-</span></code></pre></div>
+</span></code></pre></div><h2 id="參考資料">參考資料</h2>
+<ul>
+<li><a href="https://gobyexample.com/slices">Go by Example: Slices</a></li>
+</ul>
+
 
 		
 		

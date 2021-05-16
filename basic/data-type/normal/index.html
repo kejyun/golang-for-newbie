@@ -27,7 +27,7 @@
 <meta itemprop="name" content="一般">
 <meta itemprop="description" content="Golang 基礎: 一般變數"><meta itemprop="datePublished" content="2021-05-10T08:50:29&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-10T08:50:29&#43;08:00" />
-<meta itemprop="wordCount" content="113"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="122"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,一般變數," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -195,7 +195,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "一般變數宣告 一般變數宣告預設值 var num int = 0 var num int 一般變數宣告指定值 var num int = 10 var num = 10 單行宣告  應少用，程式碼可讀性不高\n var name, age, height = \u0026#34;KJ\u0026#34;, 18, 199.9 多行宣告 var ( name = \u0026#34;KJ\u0026#34; age = 18 height = 199.9 ) 多行宣告加入型態 var ( name string = \u0026#34;KJ\u0026#34; age uint = 18 height float32 = 199.9 ) 多行宣告沒有設定預設值 var ( name string age uint height float32 ) 短變數宣告 name := \u0026#34;KJ\u0026#34; age := 18 height := 199.9 單行短變數宣告  應少用，程式碼可讀性不高\n name, age, height := \u0026#34;KJ\u0026#34;, 18, 199.9 常數變數宣告 一般常數宣告 const AGE int = 18 單行常數宣告  應少用，程式碼可讀性不高\n const AUTHOR, AGE = \u0026#34;KJ\u0026#34;, 18 多行常數宣告 const ( AUTHOR = \u0026#34;KJ\u0026#34; AGE = 18 ) "
+		"articleBody": "一般變數宣告 一般變數宣告預設值 var num int = 0 var num int 一般變數宣告指定值 var num int = 10 var num = 10 單行宣告  應少用，程式碼可讀性不高\n var name, age, height = \u0026#34;KJ\u0026#34;, 18, 199.9 多行宣告 var ( name = \u0026#34;KJ\u0026#34; age = 18 height = 199.9 ) 多行宣告加入型態 var ( name string = \u0026#34;KJ\u0026#34; age uint = 18 height float32 = 199.9 ) 多行宣告沒有設定預設值 var ( name string age uint height float32 ) 短變數宣告 name := \u0026#34;KJ\u0026#34; age := 18 height := 199.9 單行短變數宣告  應少用，程式碼可讀性不高\n name, age, height := \u0026#34;KJ\u0026#34;, 18, 199.9 常數變數宣告 一般常數宣告 const AGE int = 18 單行常數宣告  應少用，程式碼可讀性不高\n const AUTHOR, AGE = \u0026#34;KJ\u0026#34;, 18 多行常數宣告 const ( AUTHOR = \u0026#34;KJ\u0026#34; AGE = 18 ) 參考資料  Go by Example: Variables Go by Example: Constants  "
 	}
 </script>
 
@@ -622,7 +622,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1b6567b4698e8ffe682e6ad303e17457.json"
+  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -658,7 +658,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1b6567b4698e8ffe682e6ad303e17457.json"
+  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -863,6 +863,29 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typelinked-list-li">
+    <a href="/basic/data-type/linked-list/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typelinked-list"><span class="">Linked list 鏈表</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -992,6 +1015,7 @@ if (!doNotTrack) {
         <li><a href="#多行常數宣告">多行常數宣告</a></li>
       </ul>
     </li>
+    <li><a href="#參考資料">參考資料</a></li>
   </ul>
 </nav>
 
@@ -1116,7 +1140,12 @@ if (!doNotTrack) {
 	<span style="color:#000">AUTHOR</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span>
 	<span style="color:#000">AGE</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">18</span>
 <span style="color:#000;font-weight:bold">)</span>
-</code></pre></div>
+</code></pre></div><h2 id="參考資料">參考資料</h2>
+<ul>
+<li><a href="https://gobyexample.com/variables">Go by Example: Variables</a></li>
+<li><a href="https://gobyexample.com/constants">Go by Example: Constants</a></li>
+</ul>
+
 
 		
 		
