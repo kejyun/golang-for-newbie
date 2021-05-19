@@ -97,6 +97,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/basic/data-type/pointer/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://golang-for-newbie.kejyun.com/leetcode/question/0101-0200/0175-combine-two-table/</loc>
     <lastmod>2021-05-12T08:50:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -133,22 +138,97 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://golang-for-newbie.kejyun.com/</loc>
-    <lastmod>2021-05-13T08:50:29+08:00</lastmod>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/tags/call-by-reference/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/categories/call-by-reference/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/tags/call-by-value/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/categories/call-by-value/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://golang-for-newbie.kejyun.com/categories/</loc>
-    <lastmod>2021-05-13T08:50:29+08:00</lastmod>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://golang-for-newbie.kejyun.com/tags/golang/</loc>
-    <lastmod>2021-05-13T08:50:29+08:00</lastmod>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://golang-for-newbie.kejyun.com/categories/golang/</loc>
-    <lastmod>2021-05-13T08:50:29+08:00</lastmod>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/tags/pointer/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/categories/pointer/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/tags/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/tags/%E5%9F%BA%E7%A4%8E/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/categories/%E5%9F%BA%E7%A4%8E/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/tags/%E6%8C%87%E6%A8%99/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/categories/%E6%8C%87%E6%A8%99/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/tags/%E6%95%99%E5%AD%B8%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/categories/%E6%95%99%E5%AD%B8%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/tags/%E6%96%B0%E6%89%8B%E6%95%99%E5%AD%B8/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://golang-for-newbie.kejyun.com/categories/%E6%96%B0%E6%89%8B%E6%95%99%E5%AD%B8/</loc>
+    <lastmod>2021-05-19T08:50:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -158,41 +238,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://golang-for-newbie.kejyun.com/categories/linked-list/</loc>
-    <lastmod>2021-05-13T08:50:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://golang-for-newbie.kejyun.com/tags/</loc>
-    <lastmod>2021-05-13T08:50:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://golang-for-newbie.kejyun.com/tags/%E5%9F%BA%E7%A4%8E/</loc>
-    <lastmod>2021-05-13T08:50:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://golang-for-newbie.kejyun.com/categories/%E5%9F%BA%E7%A4%8E/</loc>
-    <lastmod>2021-05-13T08:50:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://golang-for-newbie.kejyun.com/tags/%E6%95%99%E5%AD%B8%E6%96%87%E4%BB%B6/</loc>
-    <lastmod>2021-05-13T08:50:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://golang-for-newbie.kejyun.com/categories/%E6%95%99%E5%AD%B8%E6%96%87%E4%BB%B6/</loc>
-    <lastmod>2021-05-13T08:50:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://golang-for-newbie.kejyun.com/tags/%E6%96%B0%E6%89%8B%E6%95%99%E5%AD%B8/</loc>
-    <lastmod>2021-05-13T08:50:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://golang-for-newbie.kejyun.com/categories/%E6%96%B0%E6%89%8B%E6%95%99%E5%AD%B8/</loc>
     <lastmod>2021-05-13T08:50:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

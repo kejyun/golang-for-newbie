@@ -27,7 +27,7 @@
 <meta itemprop="name" content="Linked list 變數: 鏈表">
 <meta itemprop="description" content="Golang 基礎: Linked list 變數: 鏈表"><meta itemprop="datePublished" content="2021-05-13T08:50:29&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-13T08:50:29&#43;08:00" />
-<meta itemprop="wordCount" content="146"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="206"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,Linked list,鏈表," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -198,7 +198,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "package main import ( \u0026#34;fmt\u0026#34; ) type Developer struct { name string \/\/ 姓名 \tage int \/\/ 年齡 \tNextDeveloper *Developer } func main() { \/\/ 第 1 位工程師節點 \tvar FirstDeveloper *Developer = \u0026amp;Developer{ name: \u0026#34;KJ\u0026#34;, age: 17, } \/\/ 第 2 位工程師節點 \tvar SecondDeveloper *Developer = \u0026amp;Developer{ name: \u0026#34;Kay\u0026#34;, age: 19, } \/\/ 第 3 位工程師節點 \tvar ThirdDeveloper Developer ThirdDeveloper.name = `Jay` ThirdDeveloper.age = 23 \/\/ 插入「第 2 位工程師節點位址」到「第 1 位工程師節點」的 NextDeveloper 變數中 \tFirstDeveloper.NextDeveloper = SecondDeveloper \/\/ 插入「第 3 位工程師節點位址」到「第 2 位工程師節點」的 NextDeveloper 變數中 \tSecondDeveloper.NextDeveloper = \u0026amp;ThirdDeveloper \/\/ 建立變數，搜尋節點資訊，並指向「第 1 位工程師節點」 \tSearchDeveloper := FirstDeveloper \/\/ 只要搜尋的節點中的資訊不為空，就會列印節點資訊 \tfor SearchDeveloper != nil { \/\/ fmt.Println(*SearchDeveloper) \tfmt.Printf(\u0026#34;Developer: %\u002bv\\n\u0026#34;, SearchDeveloper) \/\/將欲查看的下個節點 指向 已查看完節點的Next字段 \tSearchDeveloper = SearchDeveloper.NextDeveloper } } \/\/ Developer: \u0026amp;{name:KJ age:17 NextDeveloper:0xc0000b8020} \/\/ Developer: \u0026amp;{name:Kay age:19 NextDeveloper:0xc0000b8040} \/\/ Developer: \u0026amp;{name:Jay age:23 NextDeveloper:\u0026lt;nil\u0026gt;} 參考資料  Linked List in Go (Golang) - golangprograms.com Go by Example: Pointers Golang資料結構-day14-鏈表(Linked list) | Taroballz StudyNotes  "
+		"articleBody": "新增連結變數 type Developer struct { name string \/\/ 姓名 \tage int \/\/ 年齡 \tNextDeveloper *Developer } 使用 new 新增 NewDeveloper := new(Developer) 使用 \u0026amp; 新增並給予預設值 var NewDeveloper *Developer = \u0026amp;Developer{ name: \u0026#34;KJ\u0026#34;, age: 17, } TestDeveloper := \u0026amp;Developer{ name: \u0026#34;KJ\u0026#34;, age: 17, } 輪詢鏈結資料 package main import ( \u0026#34;fmt\u0026#34; ) type Developer struct { name string \/\/ 姓名 \tage int \/\/ 年齡 \tNextDeveloper *Developer } func main() { \/\/ 第 1 位工程師節點 \tvar FirstDeveloper *Developer = \u0026amp;Developer{ name: \u0026#34;KJ\u0026#34;, age: 17, } \/\/ 第 2 位工程師節點 \tvar SecondDeveloper *Developer = \u0026amp;Developer{ name: \u0026#34;Kay\u0026#34;, age: 19, } \/\/ 第 3 位工程師節點 \tvar ThirdDeveloper Developer ThirdDeveloper.name = `Jay` ThirdDeveloper.age = 23 \/\/ 插入「第 2 位工程師節點位址」到「第 1 位工程師節點」的 NextDeveloper 變數中 \tFirstDeveloper.NextDeveloper = SecondDeveloper \/\/ 插入「第 3 位工程師節點位址」到「第 2 位工程師節點」的 NextDeveloper 變數中 \tSecondDeveloper.NextDeveloper = \u0026amp;ThirdDeveloper \/\/ 建立變數，搜尋節點資訊，並指向「第 1 位工程師節點」 \tSearchDeveloper := FirstDeveloper \/\/ 只要搜尋的節點中的資訊不為空，就會列印節點資訊 \tfor SearchDeveloper != nil { \/\/ fmt.Println(*SearchDeveloper) \tfmt.Printf(\u0026#34;Developer: %\u002bv\\n\u0026#34;, SearchDeveloper) \/\/將欲查看的下個節點 指向 已查看完節點的Next字段 \tSearchDeveloper = SearchDeveloper.NextDeveloper } } \/\/ Developer: \u0026amp;{name:KJ age:17 NextDeveloper:0xc0000b8020} \/\/ Developer: \u0026amp;{name:Kay age:19 NextDeveloper:0xc0000b8040} \/\/ Developer: \u0026amp;{name:Jay age:23 NextDeveloper:\u0026lt;nil\u0026gt;} 參考資料  Linked List in Go (Golang) - golangprograms.com Go by Example: Pointers Golang資料結構-day14-鏈表(Linked list) | Taroballz StudyNotes list - The Go Programming Language #21 鏈結串列 Linked-list | Golang魔法使 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天  "
 	}
 </script>
 
@@ -625,7 +625,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
+  data-offline-search-index-json-src="/offline-search-index.36b0d7b6e74c75f18ee86ef0f7ee30a3.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -661,7 +661,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.aa7ce69047df369215cad7e4c8d7ed26.json"
+  data-offline-search-index-json-src="/offline-search-index.36b0d7b6e74c75f18ee86ef0f7ee30a3.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -889,6 +889,29 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typepointer-li">
+    <a href="/basic/data-type/pointer/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typepointer"><span class="">Pointer 變數: 指標</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -997,6 +1020,19 @@ if (!doNotTrack) {
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#新增連結變數">新增連結變數</a>
+      <ul>
+        <li><a href="#使用-new-新增">使用 new 新增</a></li>
+        <li><a href="#使用--新增並給予預設值">使用 &amp; 新增並給予預設值</a></li>
+      </ul>
+    </li>
+    <li><a href="#輪詢鏈結資料">輪詢鏈結資料</a></li>
+    <li><a href="#參考資料">參考資料</a></li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -1066,7 +1102,25 @@ if (!doNotTrack) {
 
 		
 		
-		<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">package</span> <span style="color:#000">main</span>
+		<h2 id="新增連結變數">新增連結變數</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">type</span> <span style="color:#000">Developer</span> <span style="color:#204a87;font-weight:bold">struct</span> <span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000">name</span>          <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#8f5902;font-style:italic">// 姓名
+</span><span style="color:#8f5902;font-style:italic"></span>	<span style="color:#000">age</span>           <span style="color:#204a87;font-weight:bold">int</span>    <span style="color:#8f5902;font-style:italic">// 年齡
+</span><span style="color:#8f5902;font-style:italic"></span>	<span style="color:#000">NextDeveloper</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">Developer</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><h3 id="使用-new-新增">使用 new 新增</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">NewDeveloper</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">new</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Developer</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h3 id="使用--新增並給予預設值">使用 &amp; 新增並給予預設值</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">NewDeveloper</span> <span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">Developer</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">Developer</span><span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000">name</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;KJ&#34;</span><span style="color:#000;font-weight:bold">,</span>
+	<span style="color:#000">age</span><span style="color:#000;font-weight:bold">:</span>  <span style="color:#0000cf;font-weight:bold">17</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">TestDeveloper</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#ce5c00;font-weight:bold">&amp;</span><span style="color:#000">Developer</span><span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000">name</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;KJ&#34;</span><span style="color:#000;font-weight:bold">,</span>
+	<span style="color:#000">age</span><span style="color:#000;font-weight:bold">:</span>  <span style="color:#0000cf;font-weight:bold">17</span><span style="color:#000;font-weight:bold">,</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><h2 id="輪詢鏈結資料">輪詢鏈結資料</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">package</span> <span style="color:#000">main</span>
 
 <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000;font-weight:bold">(</span>
 	<span style="color:#4e9a06">&#34;fmt&#34;</span>
@@ -1122,6 +1176,8 @@ if (!doNotTrack) {
 <li><a href="https://www.golangprograms.com/golang-program-for-implementation-of-linked-list.html">Linked List in Go (Golang) - golangprograms.com</a></li>
 <li><a href="https://gobyexample.com/pointers">Go by Example: Pointers</a></li>
 <li><a href="http://www.taroballz.com/2018/04/05/Go_linklist/">Golang資料結構-day14-鏈表(Linked list) | Taroballz StudyNotes</a></li>
+<li><a href="https://golang.org/pkg/container/list/">list - The Go Programming Language</a></li>
+<li><a href="https://ithelp.ithome.com.tw/articles/10241532">#21 鏈結串列 Linked-list | Golang魔法使 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天</a></li>
 </ul>
 
 
