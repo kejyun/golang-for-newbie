@@ -266,6 +266,7 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://gobyexample.com/slices&#34;&gt;Go by Example: Slices&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hsinyu.gitbooks.io/golang_note/content/slice.html&#34;&gt;slice | golang 個人筆記和心得&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -419,6 +420,8 @@
 &lt;li&gt;&lt;a href=&#34;http://www.taroballz.com/2018/04/05/Go_linklist/&#34;&gt;Golang資料結構-day14-鏈表(Linked list) | Taroballz StudyNotes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://golang.org/pkg/container/list/&#34;&gt;list - The Go Programming Language&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://ithelp.ithome.com.tw/articles/10241532&#34;&gt;#21 鏈結串列 Linked-list | Golang魔法使 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ithelp.ithome.com.tw/articles/10214704&#34;&gt;Container 3兄弟-List - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://michaelchen.tech/golang-programming/generics/&#34;&gt;[Golang] 程式設計教學：泛型 (Generics) 相關的議題 | Michael Chen 的技術文件&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

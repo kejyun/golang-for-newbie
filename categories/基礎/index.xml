@@ -5,7 +5,7 @@
     <description>Recent content in 基礎 on Golang 菜雞修煉場</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 19 May 2021 08:50:29 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Jul 2021 08:50:29 +0800</lastBuildDate>
     
 	  <atom:link href="https://golang-for-newbie.kejyun.com/categories/%E5%9F%BA%E7%A4%8E/index.xml" rel="self" type="application/rss+xml" />
     
@@ -547,6 +547,162 @@
     </item>
     
     <item>
+      <title>Basic: 位元 bits 運算</title>
+      <link>https://golang-for-newbie.kejyun.com/basic/operators/bits/</link>
+      <pubDate>Sun, 04 Jul 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://golang-for-newbie.kejyun.com/basic/operators/bits/</guid>
+      <description>
+        
+        
+        &lt;p&gt;二進制位元運算&lt;/p&gt;
+&lt;h2 id=&#34;運算符&#34;&gt;運算符&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;運算符&lt;/th&gt;
+&lt;th&gt;簡述&lt;/th&gt;
+&lt;th&gt;說明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;amp;&lt;/td&gt;
+&lt;td&gt;AND 運算&lt;/td&gt;
+&lt;td&gt;要 &lt;code&gt;全部&lt;/code&gt; 數值都為 1，運算後才為 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;|&lt;/td&gt;
+&lt;td&gt;OR 運算&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;其中&lt;/code&gt; 一數值為 1，運算後才為 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;^&lt;/td&gt;
+&lt;td&gt;XOR 運算&lt;/td&gt;
+&lt;td&gt;兩個數值不相同（0 or 1），運算後才為 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;運算範例&#34;&gt;運算範例&lt;/h2&gt;
+&lt;h3 id=&#34;--and-運算&#34;&gt;&amp;amp; : AND 運算&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;要 &lt;code&gt;全部&lt;/code&gt; 數值都為 1，運算後才為 1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;bits_1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bits_2&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bits_1 &amp;amp; bits_2 (AND 運算)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;--or-運算&#34;&gt;| : OR 運算&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;其中&lt;/code&gt; 一數值為 1，運算後才為 1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;bits_1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bits_2&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bits_1 | bits_2 (OR 運算)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;--xor-運算&#34;&gt;^ : XOR 運算&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;兩個數值不相同（0 or 1），運算後才為 1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;項目&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;th&gt;數值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;bits_1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bits_2&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bits_1 ^ bits_2 (XOR 運算)&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Basic: Array 陣列</title>
       <link>https://golang-for-newbie.kejyun.com/basic/data-type/array/</link>
       <pubDate>Mon, 10 May 2021 08:50:29 +0800</pubDate>
@@ -843,6 +999,7 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://gobyexample.com/slices&#34;&gt;Go by Example: Slices&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hsinyu.gitbooks.io/golang_note/content/slice.html&#34;&gt;slice | golang 個人筆記和心得&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -921,6 +1078,23 @@
         
         
         
+      </description>
+    </item>
+    
+    <item>
+      <title>Basic: 運算元</title>
+      <link>https://golang-for-newbie.kejyun.com/basic/operators/</link>
+      <pubDate>Sun, 04 Jul 2021 08:50:29 +0800</pubDate>
+      
+      <guid>https://golang-for-newbie.kejyun.com/basic/operators/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.runoob.com/go/go-operators.html&#34;&gt;Go 语言运算符 | 菜鸟教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     
@@ -1009,6 +1183,8 @@
 &lt;li&gt;&lt;a href=&#34;http://www.taroballz.com/2018/04/05/Go_linklist/&#34;&gt;Golang資料結構-day14-鏈表(Linked list) | Taroballz StudyNotes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://golang.org/pkg/container/list/&#34;&gt;list - The Go Programming Language&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://ithelp.ithome.com.tw/articles/10241532&#34;&gt;#21 鏈結串列 Linked-list | Golang魔法使 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ithelp.ithome.com.tw/articles/10214704&#34;&gt;Container 3兄弟-List - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://michaelchen.tech/golang-programming/generics/&#34;&gt;[Golang] 程式設計教學：泛型 (Generics) 相關的議題 | Michael Chen 的技術文件&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
