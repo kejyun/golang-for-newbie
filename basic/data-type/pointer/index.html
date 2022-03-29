@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.82.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -27,7 +27,7 @@
 <meta itemprop="name" content="Pointer 變數: 指標">
 <meta itemprop="description" content="Golang 基礎: Pointer 變數 指標"><meta itemprop="datePublished" content="2021-05-19T08:50:29&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-19T08:50:29&#43;08:00" />
-<meta itemprop="wordCount" content="77"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="89"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,Pointer,指標,call by reference,call by value," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -51,8 +51,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.fe630fe877f92ba54bfde9c47ba47715e990b9c94e29d4a6f39fc5b19be92b44.css" as="style">
-<link href="/scss/main.min.fe630fe877f92ba54bfde9c47ba47715e990b9c94e29d4a6f39fc5b19be92b44.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b0a4285cc9eb1f78a72e3dcfb52694da8c6c2fda696bd0e1145f4ff9e1cf082d.css" as="style">
+<link href="/scss/main.min.b0a4285cc9eb1f78a72e3dcfb52694da8c6c2fda696bd0e1145f4ff9e1cf082d.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -204,7 +204,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "package main import \u0026#34;fmt\u0026#34; func changeNameByValue(name_value string) { name_value = `KJ` } func changeNameByPointer(name_pointer *string) { *name_pointer = `KJ` } func main() { name := `Nobody` fmt.Println(\u0026#34;initial Name:\u0026#34;, name) \/\/ call by value \tchangeNameByValue(name) fmt.Println(\u0026#34;after changeNameByValue:\u0026#34;, name) \/\/ call by reference \tchangeNameByPointer(\u0026amp;name) fmt.Println(\u0026#34;after changeNameByPointer:\u0026#34;, name) fmt.Println(\u0026#34;Name pointer:\u0026#34;, \u0026amp;name) } \/\/ initial Name: Nobody \/\/ after changeNameByValue: Nobody \/\/ after changeNameByPointer: KJ \/\/ Name pointer: 0xc000010240 參考資料  Go by Example: Pointers Go - Call by reference - Tutorialspoint  "
+		"articleBody": "   類型 說明     \u0026amp;variable 會回傳該變數 value 的 address，表示給我這個變數值的「記憶體位置」   *pointer 會回傳該 address 的 value，表示給我這個記憶體位置指稱到的「值」    package main import \u0026#34;fmt\u0026#34; func changeNameByValue(name_value string) { name_value = `KJ` } func changeNameByPointer(name_pointer *string) { *name_pointer = `KJ` } func main() { name := `Nobody` fmt.Println(\u0026#34;initial Name:\u0026#34;, name) \/\/ call by value \tchangeNameByValue(name) fmt.Println(\u0026#34;after changeNameByValue:\u0026#34;, name) \/\/ call by reference \tchangeNameByPointer(\u0026amp;name) fmt.Println(\u0026#34;after changeNameByPointer:\u0026#34;, name) fmt.Println(\u0026#34;Name pointer:\u0026#34;, \u0026amp;name) } \/\/ initial Name: Nobody \/\/ after changeNameByValue: Nobody \/\/ after changeNameByPointer: KJ \/\/ Name pointer: 0xc000010240 參考資料  Go by Example: Pointers Go - Call by reference - Tutorialspoint  "
 	}
 </script>
 
@@ -527,7 +527,7 @@ if (!doNotTrack) {
 				"@id": "#footer",
 				"copyrightHolder":"Golang 菜雞修煉場",
 				"publisher": "Golang 菜雞修煉場",
-				"copyrightYear":"2021"
+				"copyrightYear":"2022"
 			}
 		]
 	}
@@ -631,7 +631,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.de2067565ed1e4a3a3d0bf2eb63a218e.json"
+  data-offline-search-index-json-src="/offline-search-index.a55055663fadba7c1eee614fce71e3e2.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -667,7 +667,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.de2067565ed1e4a3a3d0bf2eb63a218e.json"
+  data-offline-search-index-json-src="/offline-search-index.a55055663fadba7c1eee614fce71e3e2.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -706,6 +706,80 @@ if (!doNotTrack) {
     
       
       <ul class="pr-md-3 ul-1">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-basicenvironment-li">
+    <a href="/basic/environment/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-basicenvironment"><span class="">環境</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicenvironmentinstall-li">
+    <a href="/basic/environment/install/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicenvironmentinstall"><span class="">安裝</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicenvironmentenv-li">
+    <a href="/basic/environment/env/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicenvironmentenv"><span class="">env 環境變數</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
         
           
             
@@ -913,6 +987,29 @@ if (!doNotTrack) {
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-basicdata-typepointer-li">
     <a href="/basic/data-type/pointer/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__page" id="m-basicdata-typepointer"><span class="td-sidebar-nav-active-item">Pointer 變數: 指標</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typestruct-li">
+    <a href="/basic/data-type/struct/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typestruct"><span class="">Struct</span></a>
     
   </li>
 
@@ -1146,7 +1243,25 @@ if (!doNotTrack) {
 
 		
 		
-		<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">package</span> <span style="color:#000">main</span>
+		<table>
+<thead>
+<tr>
+<th>類型</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;variable</td>
+<td>會回傳該變數 value 的 address，表示給我這個變數值的「記憶體位置」</td>
+</tr>
+<tr>
+<td>*pointer</td>
+<td>會回傳該 address 的 value，表示給我這個記憶體位置指稱到的「值」</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">package</span> <span style="color:#000">main</span>
 
 <span style="color:#204a87;font-weight:bold">import</span> <span style="color:#4e9a06">&#34;fmt&#34;</span>
 
@@ -1256,7 +1371,7 @@ if (!doNotTrack) {
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 KJ All Rights Reserved</small>
+        <small class="text-white">&copy; 2022 KJ All Rights Reserved</small>
         
 	
 		

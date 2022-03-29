@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.82.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -27,7 +27,7 @@
 <meta itemprop="name" content="Slice 變數: 進階陣列">
 <meta itemprop="description" content="Golang 基礎: Slice 變數: 進階陣列"><meta itemprop="datePublished" content="2021-05-11T08:50:29&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-11T08:50:29&#43;08:00" />
-<meta itemprop="wordCount" content="331"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="692"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,Slice 變數,進階陣列," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -51,8 +51,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.fe630fe877f92ba54bfde9c47ba47715e990b9c94e29d4a6f39fc5b19be92b44.css" as="style">
-<link href="/scss/main.min.fe630fe877f92ba54bfde9c47ba47715e990b9c94e29d4a6f39fc5b19be92b44.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b0a4285cc9eb1f78a72e3dcfb52694da8c6c2fda696bd0e1145f4ff9e1cf082d.css" as="style">
+<link href="/scss/main.min.b0a4285cc9eb1f78a72e3dcfb52694da8c6c2fda696bd0e1145f4ff9e1cf082d.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -198,7 +198,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "建立 slice 變數 employee_list := make([]string, 3) fmt.Println(\u0026#34;empty employee_list:\u0026#34;, employee_list) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;3rd employee:\u0026#34;, employee_list[2]) \/\/ empty employee_list: [ ] \/\/ all employee: [KJ Kay Jay] \/\/ 3rd employee: Jay employee_list := []string{\u0026#34;KJ\u0026#34;, \u0026#34;Kay\u0026#34;, \u0026#34;Jay\u0026#34;} fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) \/\/ all employee: [KJ Kay Jay] var employee_list []string employee_list = append(employee_list, \u0026#34;KJ\u0026#34;) employee_list = append(employee_list, \u0026#34;Kay\u0026#34;) employee_list = append(employee_list, \u0026#34;Jay\u0026#34;) fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;3rd employee:\u0026#34;, employee_list[2]) \/\/ all employee: [KJ Kay Jay] \/\/ 3rd employee: Jay slice 資料數量 employee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; fmt.Println(\u0026#34;len:\u0026#34;, len(employee_list)) \/\/ len: 3 加入 slice 資料 employee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; employee_list = append(employee_list, \u0026#34;Musk\u0026#34;) employee_list = append(employee_list, \u0026#34;Bill\u0026#34;, \u0026#34;Jim\u0026#34;) fmt.Println(\u0026#34;all employee after append:\u0026#34;, employee_list) \/\/ all employee after append: [KJ Kay Jay Musk Bill Jim] 複製 slice 變數  複製的 slice 變數是傳值的方式，所以複製變數的異動不會影響先前的 slice 變數\n employee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; \/\/ 複製 slice 變數 copy_employee_list := make([]string, len(employee_list)) copy(copy_employee_list, employee_list) fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;all copy employee:\u0026#34;, copy_employee_list) \/\/ all employee: [KJ Kay Jay] \/\/ all copy employee: [KJ Kay Jay]  \/\/ 變更複製的 slice copy_employee_list[2] = \u0026#34;Change Name\u0026#34; fmt.Println(\u0026#34;all employee after change:\u0026#34;, employee_list) fmt.Println(\u0026#34;all copy employee after change:\u0026#34;, copy_employee_list) \/\/ all employee after change: [KJ Kay Jay] \/\/ all copy employee after change: [KJ Kay Change Name] 取得指定 slice 範圍的變數 employee_list := make([]string, 6) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; employee_list[3] = \u0026#34;Musk\u0026#34; employee_list[4] = \u0026#34;Bill\u0026#34; employee_list[5] = \u0026#34;Jim\u0026#34;  slice[\u0026lt;從第幾個元素\u0026gt;:\u0026lt;到第幾個元素(不含此元素)\u0026gt;]\n slice_employee_list := employee_list[2:5] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [Jay Musk Bill]   slice[:\u0026lt;到第幾個元素(不含此元素)\u0026gt;]\n slice_employee_list := employee_list[:3] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [KJ Kay Jay]  slice[\u0026lt;從第幾個元素\u0026gt;:]\n slice_employee_list := employee_list[2:] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [Jay Musk Bill Jim] 參考資料  Go by Example: Slices slice | golang 個人筆記和心得  "
+		"articleBody": "Array 與 Slice 使用情境比較  Array：清單的長度是固定的（fixed length），屬於原生型別（primitive type），較少在程式中使用。 Slice：可以增加或減少清單的長度，使用 [] 定義，例如，[]byte 是 byte slice，指元素為 byte 的 slice；[]string 是 string slice，指元素為 string 的 slice。  Slice 的 Pointer \u0026amp; capacity 及 length    項目 說明     Pointer (ptr) 這個 pointer 會指向實際上在底層的 array。   Capacity (cap) 從 slice 的第一個元素開始算起，它底層 array 的元素數目，cap 的數量再擴展時會是 1, 2, 4, 8, 16   Length (len) 該 slice 中的元素數目    使用 Slice 變數時，會先指向該 Slice，然後 Pointer (ptr) 會指向這個 Slice 對應的 Array\n建立 slice 變數 透過 make 可以建立「空 slice」  適合用會對 slice 中特定位置元素進行操作時\n  make(類型, 長度, capacity)\n employee_list := make([]string, 3) fmt.Println(\u0026#34;empty employee_list:\u0026#34;, employee_list) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;3rd employee:\u0026#34;, employee_list[2]) \/\/ empty employee_list: [ ] \/\/ all employee: [KJ Kay Jay] \/\/ 3rd employee: Jay 建立一個帶有資料的 string slice  適合用在知道 slice 裡面的元素有哪些時\n employee_list := []string{\u0026#34;KJ\u0026#34;, \u0026#34;Kay\u0026#34;, \u0026#34;Jay\u0026#34;} fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) \/\/ all employee: [KJ Kay Jay] 空的 slice  一般會搭配 append 使用\n var employee_list []string employee_list = append(employee_list, \u0026#34;KJ\u0026#34;) employee_list = append(employee_list, \u0026#34;Kay\u0026#34;) employee_list = append(employee_list, \u0026#34;Jay\u0026#34;) fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;3rd employee:\u0026#34;, employee_list[2]) \/\/ all employee: [KJ Kay Jay] \/\/ 3rd employee: Jay 其他類型 Slice \/\/ integer slice integer_slice := []int{2, 3, 5, 7, 11, 13} fmt.Println(integer_slice) \/\/ [2 3 5 7 11 13]  \/\/ boolean slice boolean_slice := []bool{true, false, true, true, false, true} \/\/ [true false true true false true] fmt.Println(boolean_slice) \/\/ struct slice struct_slice := []struct { number int is_exist bool }{ {2, true}, {3, false}, {5, true}, {7, true}, {11, false}, {13, true}, } \/\/ [{2 true} {3 false} {5 true} {7 true} {11 false} {13 true}] fmt.Println(struct_slice) 多維度 Slice multi_dimension_slice := make([][]int, 3) \/\/ [[] [] []] fmt.Println(multi_dimension_slice) \/\/ 賦值 multi_dimension_slice[0] = []int{1} multi_dimension_slice[1] = []int{2} multi_dimension_slice[2] = []int{3} \/\/ [[1] [2] [3]] fmt.Println(multi_dimension_slice) multi_dimension_slice := [][]int{ []int{1}, []int{2}, []int{3}, } \/\/ [[1] [2] [3]] fmt.Println(multi_dimension_slice) Slice 與 Array 建立差異 \/\/ 沒有使用 ...，建立出來的會是 slice sliceList := []string{\u0026#34;North\u0026#34;, \u0026#34;East\u0026#34;, \u0026#34;South\u0026#34;, \u0026#34;West\u0026#34;} \/\/ slice 4 fmt.Println(reflect.TypeOf(sliceList).Kind(), len(sliceList)) \/\/ 使用 ...，建立出來的會是 array arrayList := [...]string{\u0026#34;North\u0026#34;, \u0026#34;East\u0026#34;, \u0026#34;South\u0026#34;, \u0026#34;West\u0026#34;} \/\/ array 4 fmt.Println(reflect.TypeOf(arrayList).Kind(), len(arrayList)) slice 資料數量 employee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; fmt.Println(\u0026#34;len:\u0026#34;, len(employee_list)) \/\/ len: 3 加入 slice 資料 加入單一資料到 slice employee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; employee_list = append(employee_list, \u0026#34;Musk\u0026#34;) employee_list = append(employee_list, \u0026#34;Bill\u0026#34;, \u0026#34;Jim\u0026#34;) fmt.Println(\u0026#34;all employee after append:\u0026#34;, employee_list) \/\/ all employee after append: [KJ Kay Jay Musk Bill Jim] 加入另一 slice 變數資料 employee_list_slice := []string{\u0026#34;KJ\u0026#34;, \u0026#34;Kay\u0026#34;} other_employee_slice := []string{\u0026#34;Jay\u0026#34;, \u0026#34;Jeff\u0026#34;} \/\/ 等同於 append(employee_list_slice, other_employee_slice[0], other_employee_slice[1], other_employee_slice[2]) employee_list_slice = append(employee_list_slice, other_employee_slice...) \/\/ [KJ Kay Jay Jeff] fmt.Println(employee_list_slice) 複製 slice 變數  複製的 slice 變數是傳值的方式，所以複製變數的異動不會影響先前的 slice 變數\n  copy(目標變數, 來源變數) int\n copy() 回傳的值是複製了多少元素\nemployee_list := make([]string, 3) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; \/\/ 複製 slice 變數 copy_employee_list := make([]string, len(employee_list)) copy(copy_employee_list, employee_list) fmt.Println(\u0026#34;all employee:\u0026#34;, employee_list) fmt.Println(\u0026#34;all copy employee:\u0026#34;, copy_employee_list) \/\/ all employee: [KJ Kay Jay] \/\/ all copy employee: [KJ Kay Jay]  \/\/ 變更複製的 slice copy_employee_list[2] = \u0026#34;Change Name\u0026#34; fmt.Println(\u0026#34;all employee after change:\u0026#34;, employee_list) fmt.Println(\u0026#34;all copy employee after change:\u0026#34;, copy_employee_list) \/\/ all employee after change: [KJ Kay Jay] \/\/ all copy employee after change: [KJ Kay Change Name] 複製元素大小影響  cloneScores 的元素數量如果「多於」被複製進去的元素時，會用 zero value 去補 cloneScores 的元素數量如果「少於」被複製進去的元素時，超過的元素不會被複製進去  scores := []int{1, 2, 3, 4, 5} \/\/ STEP 1：建立空 slice cloneScoresMore := make([]int, 7) cloneScoresLess := make([]int, 3) \/\/ STEP 2：使用 copy 複製 scores 元素 copy(cloneScoresMore, scores) copy(cloneScoresLess, scores) \/\/ cloneScores 的元素數量如果「多於」被複製進去的元素時，會用 zero value 去補 \/\/ [1 2 3 4 5 0 0] fmt.Println(cloneScoresMore) \/\/ cloneScores 的元素數量如果「少於」被複製進去的元素時，超過的元素不會被複製進去 \/\/ [1 2 3] fmt.Println(cloneScoresLess) 取得指定 slice 範圍的變數 employee_list := make([]string, 6) employee_list[0] = \u0026#34;KJ\u0026#34; employee_list[1] = \u0026#34;Kay\u0026#34; employee_list[2] = \u0026#34;Jay\u0026#34; employee_list[3] = \u0026#34;Musk\u0026#34; employee_list[4] = \u0026#34;Bill\u0026#34; employee_list[5] = \u0026#34;Jim\u0026#34;  slice[\u0026lt;從第幾個元素\u0026gt;:\u0026lt;到第幾個元素(不含此元素)\u0026gt;]\n slice_employee_list := employee_list[2:5] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [Jay Musk Bill]   slice[:\u0026lt;到第幾個元素(不含此元素)\u0026gt;]\n slice_employee_list := employee_list[:3] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [KJ Kay Jay]  slice[\u0026lt;從第幾個元素\u0026gt;:]\n slice_employee_list := employee_list[2:] fmt.Println(\u0026#34;employee_list:\u0026#34;, employee_list) fmt.Println(\u0026#34;slice_employee_list:\u0026#34;, slice_employee_list) \/\/ employee_list: [KJ Kay Jay Musk Bill Jim] \/\/ slice_employee_list: [Jay Musk Bill Jim] 移除元素 移除最後一個元素 scores := []int{1, 2, 3, 4, 5} removeLastIndex := scores[:len(scores)-1] \/\/ [1,2,3,4] fmt.Println(removeLastIndex) 參考資料  Go by Example: Slices slice | golang 個人筆記和心得 Go编程模式：切片，接口，时间和性能 | 酷 壳 - CoolShell [Golang] Slice and Array | PJCHENder 未整理筆記  "
 	}
 </script>
 
@@ -521,7 +521,7 @@ if (!doNotTrack) {
 				"@id": "#footer",
 				"copyrightHolder":"Golang 菜雞修煉場",
 				"publisher": "Golang 菜雞修煉場",
-				"copyrightYear":"2021"
+				"copyrightYear":"2022"
 			}
 		]
 	}
@@ -625,7 +625,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.de2067565ed1e4a3a3d0bf2eb63a218e.json"
+  data-offline-search-index-json-src="/offline-search-index.a55055663fadba7c1eee614fce71e3e2.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -661,7 +661,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.de2067565ed1e4a3a3d0bf2eb63a218e.json"
+  data-offline-search-index-json-src="/offline-search-index.a55055663fadba7c1eee614fce71e3e2.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -700,6 +700,80 @@ if (!doNotTrack) {
     
       
       <ul class="pr-md-3 ul-1">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-basicenvironment-li">
+    <a href="/basic/environment/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-basicenvironment"><span class="">環境</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicenvironmentinstall-li">
+    <a href="/basic/environment/install/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicenvironmentinstall"><span class="">安裝</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicenvironmentenv-li">
+    <a href="/basic/environment/env/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicenvironmentenv"><span class="">env 環境變數</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
         
           
             
@@ -912,6 +986,29 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typestruct-li">
+    <a href="/basic/data-type/struct/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typestruct"><span class="">Struct</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -1073,11 +1170,36 @@ if (!doNotTrack) {
 
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#建立-slice-變數">建立 slice 變數</a></li>
+    <li><a href="#array-與-slice-使用情境比較">Array 與 Slice 使用情境比較</a></li>
+    <li><a href="#slice-的-pointer--capacity-及-length">Slice 的 Pointer &amp; capacity 及 length</a></li>
+    <li><a href="#建立-slice-變數">建立 slice 變數</a>
+      <ul>
+        <li><a href="#透過-make-可以建立空-slice">透過 make 可以建立「空 slice」</a></li>
+        <li><a href="#建立一個帶有資料的-string-slice">建立一個帶有資料的 string slice</a></li>
+        <li><a href="#空的-slice">空的 slice</a></li>
+        <li><a href="#其他類型-slice">其他類型 Slice</a></li>
+        <li><a href="#多維度-slice">多維度 Slice</a></li>
+        <li><a href="#slice-與-array-建立差異">Slice 與 Array 建立差異</a></li>
+      </ul>
+    </li>
     <li><a href="#slice-資料數量">slice 資料數量</a></li>
-    <li><a href="#加入-slice-資料">加入 slice 資料</a></li>
-    <li><a href="#複製-slice-變數">複製 slice 變數</a></li>
+    <li><a href="#加入-slice-資料">加入 slice 資料</a>
+      <ul>
+        <li><a href="#加入單一資料到-slice">加入單一資料到 slice</a></li>
+        <li><a href="#加入另一-slice-變數資料">加入另一 slice 變數資料</a></li>
+      </ul>
+    </li>
+    <li><a href="#複製-slice-變數">複製 slice 變數</a>
+      <ul>
+        <li><a href="#複製元素大小影響">複製元素大小影響</a></li>
+      </ul>
+    </li>
     <li><a href="#取得指定-slice-範圍的變數">取得指定 slice 範圍的變數</a></li>
+    <li><a href="#移除元素">移除元素</a>
+      <ul>
+        <li><a href="#移除最後一個元素">移除最後一個元素</a></li>
+      </ul>
+    </li>
     <li><a href="#參考資料">參考資料</a></li>
   </ul>
 </nav>
@@ -1151,7 +1273,43 @@ if (!doNotTrack) {
 
 		
 		
-		<h2 id="建立-slice-變數">建立 slice 變數</h2>
+		<h2 id="array-與-slice-使用情境比較">Array 與 Slice 使用情境比較</h2>
+<ul>
+<li>Array：清單的長度是固定的（fixed length），屬於原生型別（primitive type），較少在程式中使用。</li>
+<li>Slice：可以增加或減少清單的長度，使用 [] 定義，例如，[]byte 是 byte slice，指元素為 byte 的 slice；[]string 是 string slice，指元素為 string 的 slice。</li>
+</ul>
+<h2 id="slice-的-pointer--capacity-及-length">Slice 的 Pointer &amp; capacity 及 length</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pointer (ptr)</td>
+<td>這個 pointer 會指向實際上在底層的 array。</td>
+</tr>
+<tr>
+<td>Capacity (cap)</td>
+<td>從 slice 的第一個元素開始算起，它底層 array 的元素數目，cap 的數量再擴展時會是 1, 2, 4, 8, 16</td>
+</tr>
+<tr>
+<td>Length (len)</td>
+<td>該 slice 中的元素數目</td>
+</tr>
+</tbody>
+</table>
+<p>使用 Slice 變數時，會先指向該 Slice，然後 <code>Pointer (ptr)</code> 會指向這個 Slice 對應的 Array</p>
+<h2 id="建立-slice-變數">建立 slice 變數</h2>
+<h3 id="透過-make-可以建立空-slice">透過 make 可以建立「空 slice」</h3>
+<blockquote>
+<p>適合用會對 slice 中特定位置元素進行操作時</p>
+</blockquote>
+<blockquote>
+<p>make(<code>類型</code>, <code>長度</code>, <code>capacity</code>)</p>
+</blockquote>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">employee_list</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">([]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;empty employee_list:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">)</span>
 
@@ -1163,10 +1321,18 @@ if (!doNotTrack) {
 <span style="color:#8f5902;font-style:italic">// empty employee_list: [  ]
 </span><span style="color:#8f5902;font-style:italic">// all employee: [KJ Kay Jay]
 </span><span style="color:#8f5902;font-style:italic">// 3rd employee: Jay
-</span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">employee_list</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;KJ&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Kay&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Jay&#34;</span><span style="color:#000;font-weight:bold">}</span>
+</span></code></pre></div><h3 id="建立一個帶有資料的-string-slice">建立一個帶有資料的 string slice</h3>
+<blockquote>
+<p>適合用在知道 slice 裡面的元素有哪些時</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">employee_list</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;KJ&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Kay&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Jay&#34;</span><span style="color:#000;font-weight:bold">}</span>
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;all employee:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#8f5902;font-style:italic">// all employee: [KJ Kay Jay]
-</span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">employee_list</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">string</span>
+</span></code></pre></div><h3 id="空的-slice">空的 slice</h3>
+<blockquote>
+<p>一般會搭配 append 使用</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">var</span> <span style="color:#000">employee_list</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">string</span>
 
 <span style="color:#000">employee_list</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;KJ&#34;</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#000">employee_list</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Kay&#34;</span><span style="color:#000;font-weight:bold">)</span>
@@ -1175,7 +1341,63 @@ if (!doNotTrack) {
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;3rd employee:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">])</span>
 <span style="color:#8f5902;font-style:italic">// all employee: [KJ Kay Jay]
 </span><span style="color:#8f5902;font-style:italic">// 3rd employee: Jay
-</span></code></pre></div><h2 id="slice-資料數量">slice 資料數量</h2>
+</span></code></pre></div><h3 id="其他類型-slice">其他類型 Slice</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8f5902;font-style:italic">// integer slice
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">integer_slice</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">11</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">integer_slice</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic">// [2 3 5 7 11 13]
+</span><span style="color:#8f5902;font-style:italic"></span>
+
+
+<span style="color:#8f5902;font-style:italic">// boolean slice
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">boolean_slice</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">bool</span><span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">}</span>
+<span style="color:#8f5902;font-style:italic">// [true false true true false true]
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">boolean_slice</span><span style="color:#000;font-weight:bold">)</span>
+
+
+<span style="color:#8f5902;font-style:italic">// struct slice
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">struct_slice</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">struct</span> <span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000">number</span>   <span style="color:#204a87;font-weight:bold">int</span>
+	<span style="color:#000">is_exist</span> <span style="color:#204a87;font-weight:bold">bool</span>
+<span style="color:#000;font-weight:bold">}{</span>
+	<span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">},</span>
+	<span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">},</span>
+	<span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">},</span>
+	<span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">},</span>
+	<span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">11</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">},</span>
+	<span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">13</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">},</span>
+<span style="color:#000;font-weight:bold">}</span>
+<span style="color:#8f5902;font-style:italic">// [{2 true} {3 false} {5 true} {7 true} {11 false} {13 true}]
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">struct_slice</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h3 id="多維度-slice">多維度 Slice</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">multi_dimension_slice</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">([][]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic">// [[] [] []]
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">multi_dimension_slice</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#8f5902;font-style:italic">// 賦值
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">multi_dimension_slice</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000">multi_dimension_slice</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000">multi_dimension_slice</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">}</span>
+<span style="color:#8f5902;font-style:italic">// [[1] [2] [3]]
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">multi_dimension_slice</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">multi_dimension_slice</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[][]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">},</span>
+	<span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">},</span>
+	<span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">},</span>
+<span style="color:#000;font-weight:bold">}</span>
+<span style="color:#8f5902;font-style:italic">// [[1] [2] [3]]
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">multi_dimension_slice</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h3 id="slice-與-array-建立差異">Slice 與 Array 建立差異</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#8f5902;font-style:italic">// 沒有使用 ...，建立出來的會是 slice
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">sliceList</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;North&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;East&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;South&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;West&#34;</span><span style="color:#000;font-weight:bold">}</span>
+<span style="color:#8f5902;font-style:italic">// slice 4
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reflect</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">TypeOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">sliceList</span><span style="color:#000;font-weight:bold">).</span><span style="color:#000">Kind</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">sliceList</span><span style="color:#000;font-weight:bold">))</span>
+
+<span style="color:#8f5902;font-style:italic">// 使用 ...，建立出來的會是 array
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">arrayList</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;North&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;East&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;South&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;West&#34;</span><span style="color:#000;font-weight:bold">}</span>
+<span style="color:#8f5902;font-style:italic">// array 4
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reflect</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">TypeOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arrayList</span><span style="color:#000;font-weight:bold">).</span><span style="color:#000">Kind</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">arrayList</span><span style="color:#000;font-weight:bold">))</span>
+</code></pre></div><h2 id="slice-資料數量">slice 資料數量</h2>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">employee_list</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">([]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span>
 
 <span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span>
@@ -1184,6 +1406,7 @@ if (!doNotTrack) {
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;len:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">))</span>
 <span style="color:#8f5902;font-style:italic">// len: 3
 </span></code></pre></div><h2 id="加入-slice-資料">加入 slice 資料</h2>
+<h3 id="加入單一資料到-slice">加入單一資料到 slice</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">employee_list</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">([]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span>
 
 <span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span>
@@ -1194,10 +1417,22 @@ if (!doNotTrack) {
 <span style="color:#000">employee_list</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Bill&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Jim&#34;</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;all employee after append:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#8f5902;font-style:italic">// all employee after append: [KJ Kay Jay Musk Bill Jim]
-</span></code></pre></div><h2 id="複製-slice-變數">複製 slice 變數</h2>
+</span></code></pre></div><h3 id="加入另一-slice-變數資料">加入另一 slice 變數資料</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">employee_list_slice</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;KJ&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Kay&#34;</span><span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000">other_employee_slice</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;Jay&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Jeff&#34;</span><span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#8f5902;font-style:italic">// 等同於 append(employee_list_slice, other_employee_slice[0], other_employee_slice[1], other_employee_slice[2])
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">employee_list_slice</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#204a87">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">employee_list_slice</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">other_employee_slice</span><span style="color:#ce5c00;font-weight:bold">...</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic">// [KJ Kay Jay Jeff]
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">employee_list_slice</span><span style="color:#000;font-weight:bold">)</span>                                          
+</code></pre></div><h2 id="複製-slice-變數">複製 slice 變數</h2>
 <blockquote>
 <p>複製的 slice 變數是傳值的方式，所以複製變數的異動不會影響先前的 slice 變數</p>
 </blockquote>
+<blockquote>
+<p>copy(<code>目標變數</code>, <code>來源變數</code>) int</p>
+</blockquote>
+<p><code>copy()</code> 回傳的值是複製了多少元素</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">employee_list</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">([]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span>
 
 <span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span>
@@ -1219,7 +1454,28 @@ if (!doNotTrack) {
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;all copy employee after change:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">copy_employee_list</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#8f5902;font-style:italic">// all employee after change: [KJ Kay Jay]
 </span><span style="color:#8f5902;font-style:italic">// all copy employee after change: [KJ Kay Change Name]
-</span></code></pre></div><h2 id="取得指定-slice-範圍的變數">取得指定 slice 範圍的變數</h2>
+</span></code></pre></div><h3 id="複製元素大小影響">複製元素大小影響</h3>
+<ul>
+<li>cloneScores 的元素數量如果<code>「多於」</code>被複製進去的元素時，會用 zero value 去補</li>
+<li>cloneScores 的元素數量如果<code>「少於」</code>被複製進去的元素時，超過的元素不會被複製進去</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">scores</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#8f5902;font-style:italic">// STEP 1：建立空 slice
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">cloneScoresMore</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">([]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000">cloneScoresLess</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">([]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#8f5902;font-style:italic">// STEP 2：使用 copy 複製 scores 元素
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#204a87">copy</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">cloneScoresMore</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">scores</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#204a87">copy</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">cloneScoresLess</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">scores</span><span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#8f5902;font-style:italic">// cloneScores 的元素數量如果「多於」被複製進去的元素時，會用 zero value 去補
+</span><span style="color:#8f5902;font-style:italic">// [1 2 3 4 5 0 0]
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">cloneScoresMore</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#8f5902;font-style:italic">// cloneScores 的元素數量如果「少於」被複製進去的元素時，超過的元素不會被複製進去
+</span><span style="color:#8f5902;font-style:italic">// [1 2 3]
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">cloneScoresLess</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="取得指定-slice-範圍的變數">取得指定 slice 範圍的變數</h2>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">employee_list</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">([]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">)</span>
 
 <span style="color:#000">employee_list</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;KJ&#34;</span>
@@ -1253,10 +1509,18 @@ if (!doNotTrack) {
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;slice_employee_list:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">slice_employee_list</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#8f5902;font-style:italic">// employee_list: [KJ Kay Jay Musk Bill Jim]
 </span><span style="color:#8f5902;font-style:italic">// slice_employee_list: [Jay Musk Bill Jim]
-</span></code></pre></div><h2 id="參考資料">參考資料</h2>
+</span></code></pre></div><h2 id="移除元素">移除元素</h2>
+<h3 id="移除最後一個元素">移除最後一個元素</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">scores</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">{</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">4</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000">removeLastIndex</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">scores</span><span style="color:#000;font-weight:bold">[:</span><span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">scores</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">]</span>
+<span style="color:#8f5902;font-style:italic">// [1,2,3,4]
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">removeLastIndex</span><span style="color:#000;font-weight:bold">)</span>
+</code></pre></div><h2 id="參考資料">參考資料</h2>
 <ul>
 <li><a href="https://gobyexample.com/slices">Go by Example: Slices</a></li>
 <li><a href="https://hsinyu.gitbooks.io/golang_note/content/slice.html">slice | golang 個人筆記和心得</a></li>
+<li><a href="https://coolshell.cn/articles/21128.html">Go编程模式：切片，接口，时间和性能 | 酷 壳 - CoolShell</a></li>
+<li><a href="https://pjchender.dev/golang/slice-and-array/">[Golang] Slice and Array | PJCHENder 未整理筆記</a></li>
 </ul>
 
 
@@ -1335,7 +1599,7 @@ if (!doNotTrack) {
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 KJ All Rights Reserved</small>
+        <small class="text-white">&copy; 2022 KJ All Rights Reserved</small>
         
 	
 		

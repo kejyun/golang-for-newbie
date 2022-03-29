@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.82.1" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -21,13 +21,13 @@
 <meta property="og:description" content="Golang 基礎: Map 變數: key-value 陣列" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://golang-for-newbie.kejyun.com/basic/data-type/map/" /><meta property="og:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/><meta property="article:section" content="basic" />
-<meta property="article:published_time" content="2021-05-11T08:50:29&#43;08:00" />
-<meta property="article:modified_time" content="2021-05-11T08:50:29&#43;08:00" />
+<meta property="article:published_time" content="2021-05-11T00:00:47&#43;08:00" />
+<meta property="article:modified_time" content="2022-03-29T00:00:47&#43;08:00" />
 
 <meta itemprop="name" content="Map 變數: key-value 陣列">
-<meta itemprop="description" content="Golang 基礎: Map 變數: key-value 陣列"><meta itemprop="datePublished" content="2021-05-11T08:50:29&#43;08:00" />
-<meta itemprop="dateModified" content="2021-05-11T08:50:29&#43;08:00" />
-<meta itemprop="wordCount" content="126"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="description" content="Golang 基礎: Map 變數: key-value 陣列"><meta itemprop="datePublished" content="2021-05-11T00:00:47&#43;08:00" />
+<meta itemprop="dateModified" content="2022-03-29T00:00:47&#43;08:00" />
+<meta itemprop="wordCount" content="230"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,Map 變數,key-value 陣列," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -51,8 +51,8 @@ if (!doNotTrack) {
 
 
 
-<link rel="preload" href="/scss/main.min.fe630fe877f92ba54bfde9c47ba47715e990b9c94e29d4a6f39fc5b19be92b44.css" as="style">
-<link href="/scss/main.min.fe630fe877f92ba54bfde9c47ba47715e990b9c94e29d4a6f39fc5b19be92b44.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.b0a4285cc9eb1f78a72e3dcfb52694da8c6c2fda696bd0e1145f4ff9e1cf082d.css" as="style">
+<link href="/scss/main.min.b0a4285cc9eb1f78a72e3dcfb52694da8c6c2fda696bd0e1145f4ff9e1cf082d.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -125,14 +125,14 @@ if (!doNotTrack) {
             "height":"60"
         }
     },
-    "dateCreated":"2021-05-11T08:50:29\u002b08:00",
-    "datePublished":"2021-05-11T08:50:29\u002b08:00",
+    "dateCreated":"2021-05-11T00:00:47\u002b08:00",
+    "datePublished":"2021-05-11T00:00:47\u002b08:00",
     
     
     "author":"KeJyun",
     "creator":"KeJyun",
     
-    "dateModified":"2021-05-11T08:50:29\u002b08:00",
+    "dateModified":"2022-03-29T00:00:47\u002b08:00",
     "articleSection":"TechArticle"
 }
 </script>
@@ -152,9 +152,9 @@ if (!doNotTrack) {
 		"url": "https:\/\/golang-for-newbie.kejyun.com\/basic\/data-type\/map\/",
 		"headline": "Map 變數: key-value 陣列",
 		"alternativeHeadline": "Map 變數: key-value 陣列",
-		"dateCreated": "2021-05-11T08:50:29\u002b08:00",
-		"datePublished": "2021-05-11T08:50:29\u002b08:00",
-		"dateModified": "2021-05-11T08:50:29\u002b08:00",
+		"dateCreated": "2021-05-11T00:00:47\u002b08:00",
+		"datePublished": "2021-05-11T00:00:47\u002b08:00",
+		"dateModified": "2022-03-29T00:00:47\u002b08:00",
 		"inLanguage": "zh",
 		"isFamilyFriendly": "true",
 		"copyrightYear": "2021",
@@ -198,7 +198,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "建立 Map 變數 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_1:7 key_2:13] 取得 Map 鍵值資料 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 v1 := m[\u0026#34;key_1\u0026#34;] fmt.Println(\u0026#34;v1: \u0026#34;, v1) \/\/ v1: 7 Map 資料數量 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;len:\u0026#34;, len(m)) \/\/ len: 2 刪除 Map 指定鍵值資料 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_1:7 key_2:13]  delete(m, \u0026#34;key_1\u0026#34;) fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_2:13] 判斷鍵值是否存在 僅需要判斷資料是否存在，沒有需要使用該數值的話，可以將第一個參數設定為 底線 _，用第二個變數來判斷是否存在\nm := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 _, is_key2_exist := m[\u0026#34;key_2\u0026#34;] _, is_key3_exist := m[\u0026#34;key_3\u0026#34;] fmt.Println(\u0026#34;is_key2_exist:\u0026#34;, is_key2_exist) fmt.Println(\u0026#34;is_key3_exist:\u0026#34;, is_key3_exist) \/\/ is_key2_exist: true \/\/ is_key3_exist: false 直接指定數值 m := map[string]string{\u0026#34;name\u0026#34;: `KJ`, \u0026#34;age\u0026#34;: `18`} fmt.Println(\u0026#34;developer:\u0026#34;, m) \/\/ developer: map[age:18 name:KJ] 參考資料  Go by Example: Maps  "
+		"articleBody": "建立 Map 變數  map[key 的類型]value 的類型\n m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_1:7 key_2:13] 取得 Map 鍵值資料 m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 v1 := m[\u0026#34;key_1\u0026#34;] fmt.Println(\u0026#34;v1: \u0026#34;, v1) \/\/ v1: 7 Map 資料數量 len()  len(變數)\n m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;len:\u0026#34;, len(m)) \/\/ len: 2 刪除 Map 指定鍵值資料 delete()  delete(變數, 鍵值)\n m := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_1:7 key_2:13]  delete(m, \u0026#34;key_1\u0026#34;) fmt.Println(\u0026#34;map:\u0026#34;, m) \/\/ map: map[key_2:13] 判斷鍵值是否存在  變數資料, 是否存在 := map 變數[鍵值]\n 僅需要判斷資料是否存在，沒有需要使用該數值的話，可以將第一個參數設定為 底線 _，用第二個變數來判斷是否存在\nm := make(map[string]int) m[\u0026#34;key_1\u0026#34;] = 7 m[\u0026#34;key_2\u0026#34;] = 13 _, is_key2_exist := m[\u0026#34;key_2\u0026#34;] _, is_key3_exist := m[\u0026#34;key_3\u0026#34;] fmt.Println(\u0026#34;is_key2_exist:\u0026#34;, is_key2_exist) fmt.Println(\u0026#34;is_key3_exist:\u0026#34;, is_key3_exist) \/\/ is_key2_exist: true \/\/ is_key3_exist: false 直接指定數值 m := map[string]string{\u0026#34;name\u0026#34;: `KJ`, \u0026#34;age\u0026#34;: `18`} fmt.Println(\u0026#34;developer:\u0026#34;, m) \/\/ developer: map[age:18 name:KJ] 使用 struct 型態在 map package main import \u0026#34;fmt\u0026#34; type Person struct { FirstName string LastName string } func main() { \/\/ 使用 make 建立 Map \tEmployeeMap := make(map[string]Person) EmployeeMap[\u0026#34;KJ\u0026#34;] = Person{ FirstName: \u0026#34;Kay\u0026#34;, LastName: \u0026#34;Jay\u0026#34;, } \/\/ map[KJ:{FirstName:Kay LastName:Jay}] \tfmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, EmployeeMap) } Map 和 Struct 的選擇    欄位 Map Struct     鍵值 所有的 key 都需要是相同型別 -   數值資料 所有的 value 都需要是相同型別 value 可以是不同型別   迭代 Key 有被 indexed，因此可以進行迭代，列出所有的 key-value pairs Key 沒有被 indexed，因此沒辦法透過迭代的方式列出所有的 key-value pair   變數傳遞方式 Reference Type Value Type   用途 通常用在資料集合關聯性非常強的資料，例如 colors 通常用在一個帶有多種屬性的東西，例如 person   資料定義 不用一開始就知道所有的 key 有哪些，因為可以後續新增和刪除 需要一開始就清楚定義所有的欄位    參考資料  Go by Example: Maps [Golang] maps | PJCHENder 未整理筆記  "
 	}
 </script>
 
@@ -521,7 +521,7 @@ if (!doNotTrack) {
 				"@id": "#footer",
 				"copyrightHolder":"Golang 菜雞修煉場",
 				"publisher": "Golang 菜雞修煉場",
-				"copyrightYear":"2021"
+				"copyrightYear":"2022"
 			}
 		]
 	}
@@ -625,7 +625,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.de2067565ed1e4a3a3d0bf2eb63a218e.json"
+  data-offline-search-index-json-src="/offline-search-index.a55055663fadba7c1eee614fce71e3e2.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -661,7 +661,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.de2067565ed1e4a3a3d0bf2eb63a218e.json"
+  data-offline-search-index-json-src="/offline-search-index.a55055663fadba7c1eee614fce71e3e2.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -700,6 +700,80 @@ if (!doNotTrack) {
     
       
       <ul class="pr-md-3 ul-1">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-basicenvironment-li">
+    <a href="/basic/environment/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-basicenvironment"><span class="">環境</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicenvironmentinstall-li">
+    <a href="/basic/environment/install/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicenvironmentinstall"><span class="">安裝</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicenvironmentenv-li">
+    <a href="/basic/environment/env/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicenvironmentenv"><span class="">env 環境變數</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
         
           
             
@@ -912,6 +986,29 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typestruct-li">
+    <a href="/basic/data-type/struct/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typestruct"><span class="">Struct</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -1075,10 +1172,12 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#建立-map-變數">建立 Map 變數</a></li>
     <li><a href="#取得-map-鍵值資料">取得 Map 鍵值資料</a></li>
-    <li><a href="#map-資料數量">Map 資料數量</a></li>
-    <li><a href="#刪除-map-指定鍵值資料">刪除 Map 指定鍵值資料</a></li>
+    <li><a href="#map-資料數量-len">Map 資料數量 len()</a></li>
+    <li><a href="#刪除-map-指定鍵值資料-delete">刪除 Map 指定鍵值資料 delete()</a></li>
     <li><a href="#判斷鍵值是否存在">判斷鍵值是否存在</a></li>
     <li><a href="#直接指定數值">直接指定數值</a></li>
+    <li><a href="#使用-struct-型態在-map">使用 struct 型態在 map</a></li>
+    <li><a href="#map-和-struct-的選擇">Map 和 Struct 的選擇</a></li>
     <li><a href="#參考資料">參考資料</a></li>
   </ul>
 </nav>
@@ -1153,6 +1252,9 @@ if (!doNotTrack) {
 		
 		
 		<h2 id="建立-map-變數">建立 Map 變數</h2>
+<blockquote>
+<p>map[<code>key 的類型</code>]<code>value 的類型</code></p>
+</blockquote>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">m</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">map</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#000">m</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;key_1&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">7</span>
 <span style="color:#000">m</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;key_2&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">13</span>
@@ -1165,13 +1267,19 @@ if (!doNotTrack) {
 <span style="color:#000">v1</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">m</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;key_1&#34;</span><span style="color:#000;font-weight:bold">]</span>
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;v1: &#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">v1</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#8f5902;font-style:italic">// v1:  7
-</span></code></pre></div><h2 id="map-資料數量">Map 資料數量</h2>
+</span></code></pre></div><h2 id="map-資料數量-len">Map 資料數量 len()</h2>
+<blockquote>
+<p>len(<code>變數</code>)</p>
+</blockquote>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">m</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">map</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#000">m</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;key_1&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">7</span>
 <span style="color:#000">m</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;key_2&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">13</span>
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;len:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">m</span><span style="color:#000;font-weight:bold">))</span>
 <span style="color:#8f5902;font-style:italic">// len: 2
-</span></code></pre></div><h2 id="刪除-map-指定鍵值資料">刪除 Map 指定鍵值資料</h2>
+</span></code></pre></div><h2 id="刪除-map-指定鍵值資料-delete">刪除 Map 指定鍵值資料 delete()</h2>
+<blockquote>
+<p>delete(<code>變數</code>, <code>鍵值</code>)</p>
+</blockquote>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">m</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">map</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#000">m</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;key_1&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">7</span>
 <span style="color:#000">m</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;key_2&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">13</span>
@@ -1183,6 +1291,9 @@ if (!doNotTrack) {
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;map:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">m</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#8f5902;font-style:italic">// map: map[key_2:13]
 </span></code></pre></div><h2 id="判斷鍵值是否存在">判斷鍵值是否存在</h2>
+<blockquote>
+<p><code>變數資料</code>, <code>是否存在</code> := <code>map 變數</code>[<code>鍵值</code>]</p>
+</blockquote>
 <p>僅需要判斷資料是否存在，沒有需要使用該數值的話，可以將第一個參數設定為 <code>底線 _</code>，用第二個變數來判斷是否存在</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">m</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">map</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#000">m</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;key_1&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">7</span>
@@ -1198,9 +1309,73 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000">m</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87;font-weight:bold">map</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">]</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">`KJ`</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;age&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">`18`</span><span style="color:#000;font-weight:bold">}</span>
 <span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;developer:&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">m</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#8f5902;font-style:italic">// developer: map[age:18 name:KJ]
-</span></code></pre></div><h2 id="參考資料">參考資料</h2>
+</span></code></pre></div><h2 id="使用-struct-型態在-map">使用 struct 型態在 map</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">package</span> <span style="color:#000">main</span>
+
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#4e9a06">&#34;fmt&#34;</span>
+
+<span style="color:#204a87;font-weight:bold">type</span> <span style="color:#000">Person</span> <span style="color:#204a87;font-weight:bold">struct</span> <span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000">FirstName</span> <span style="color:#204a87;font-weight:bold">string</span>
+	<span style="color:#000">LastName</span>  <span style="color:#204a87;font-weight:bold">string</span>
+<span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#204a87;font-weight:bold">func</span> <span style="color:#000">main</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#8f5902;font-style:italic">// 使用 make 建立 Map
+</span><span style="color:#8f5902;font-style:italic"></span>	<span style="color:#000">EmployeeMap</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#204a87">make</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">map</span><span style="color:#000;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">string</span><span style="color:#000;font-weight:bold">]</span><span style="color:#000">Person</span><span style="color:#000;font-weight:bold">)</span>
+	<span style="color:#000">EmployeeMap</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;KJ&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000">Person</span><span style="color:#000;font-weight:bold">{</span>
+		<span style="color:#000">FirstName</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Kay&#34;</span><span style="color:#000;font-weight:bold">,</span>
+		<span style="color:#000">LastName</span><span style="color:#000;font-weight:bold">:</span>  <span style="color:#4e9a06">&#34;Jay&#34;</span><span style="color:#000;font-weight:bold">,</span>
+	<span style="color:#000;font-weight:bold">}</span>
+
+	<span style="color:#8f5902;font-style:italic">// map[KJ:{FirstName:Kay LastName:Jay}]
+</span><span style="color:#8f5902;font-style:italic"></span>	<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Printf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;%+v\n&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">EmployeeMap</span><span style="color:#000;font-weight:bold">)</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><h2 id="map-和-struct-的選擇">Map 和 Struct 的選擇</h2>
+<table>
+<thead>
+<tr>
+<th>欄位</th>
+<th>Map</th>
+<th>Struct</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>鍵值</td>
+<td>所有的 key 都需要是相同型別</td>
+<td>-</td>
+</tr>
+<tr>
+<td>數值資料</td>
+<td>所有的 value 都需要是相同型別</td>
+<td>value 可以是不同型別</td>
+</tr>
+<tr>
+<td>迭代</td>
+<td>Key 有被 indexed，因此可以進行迭代，列出所有的 key-value pairs</td>
+<td>Key 沒有被 indexed，因此沒辦法透過迭代的方式列出所有的 key-value pair</td>
+</tr>
+<tr>
+<td>變數傳遞方式</td>
+<td>Reference Type</td>
+<td>Value Type</td>
+</tr>
+<tr>
+<td>用途</td>
+<td>通常用在資料集合關聯性非常強的資料，例如 colors</td>
+<td>通常用在一個帶有多種屬性的東西，例如 person</td>
+</tr>
+<tr>
+<td>資料定義</td>
+<td>不用一開始就知道所有的 key 有哪些，因為可以後續新增和刪除</td>
+<td>需要一開始就清楚定義所有的欄位</td>
+</tr>
+</tbody>
+</table>
+<h2 id="參考資料">參考資料</h2>
 <ul>
 <li><a href="https://gobyexample.com/maps">Go by Example: Maps</a></li>
+<li><a href="https://pjchender.dev/golang/maps">[Golang] maps | PJCHENder 未整理筆記</a></li>
 </ul>
 
 
@@ -1238,7 +1413,7 @@ if (!doNotTrack) {
 		
 
 		
-		<div class="text-muted mt-5 pt-3 border-top">最後修改 May 11, 2021
+		<div class="text-muted mt-5 pt-3 border-top">最後修改 March 29, 2022
 </div>
 </div>
 
@@ -1279,7 +1454,7 @@ if (!doNotTrack) {
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 KJ All Rights Reserved</small>
+        <small class="text-white">&copy; 2022 KJ All Rights Reserved</small>
         
 	
 		
