@@ -27,7 +27,7 @@
 <meta itemprop="name" content="Struct 變數">
 <meta itemprop="description" content="Golang 基礎: Struct 變數"><meta itemprop="datePublished" content="2022-03-29T00:00:47&#43;08:00" />
 <meta itemprop="dateModified" content="2022-03-29T00:00:47&#43;08:00" />
-<meta itemprop="wordCount" content="359"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="439"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,Struct 變數," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -195,7 +195,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "structs 是在 GO 中的一種資料型態，它就類似 JavaScript 中的物件（Object）或是 Ruby 中的 Hash。\n格式 type \u0026lt;結構名稱\u0026gt; struct { \u0026lt;鍵值1\u0026gt; \u0026lt;數值類型\u0026gt; \u0026lt;鍵值2\u0026gt; \u0026lt;數值類型\u0026gt; } 建立 Struct \/\/ STEP 1：建立一個 person 型別，它本質上是 struct type Person struct { firstName string lastName string } \/\/ 等同於 type Person struct { firstName, lastName string } 根據資料輸入的順序決定誰是 firstName 和 lastName alex := Person{\u0026#34;Alex\u0026#34;, \u0026#34;Anderson\u0026#34;} \/\/ {Alex Anderson} fmt.Println(alex) \/\/ {firstName:Alex lastName:Anderson} fmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, alex) 直接取得 struct 的 pointer alex := \u0026amp;Person{\u0026#34;Alex\u0026#34;, \u0026#34;Anderson\u0026#34;} \/\/ \u0026amp;{Alex Anderson} fmt.Println(alex) \/\/ \u0026amp;{firstName:Alex lastName:Anderson} fmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, alex) 指定 structure 鍵值數值（建議使用）  程式可讀性高，不會指定到錯誤的鍵值資料\n alex := Person{ firstName: \u0026#34;Alex\u0026#34;, lastName: \u0026#34;Anderson\u0026#34;, } \/\/ {Alex Anderson} fmt.Println(alex) \/\/ {firstName:Alex lastName:Anderson} fmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, alex) 先宣告再賦值 var alex Person alex.firstName = \u0026#34;Alex\u0026#34; alex.lastName = \u0026#34;Anderson\u0026#34; \/\/ {Alex Anderson} fmt.Println(alex) 巢狀 struct package main import \u0026#34;fmt\u0026#34; \/\/ STEP 1：定義外層 struct type Person struct { firstName string lastName string contact ContactInfo } \/\/ STEP 2：定義內層 struct type ContactInfo struct { email string phone string } func main() { \/\/ STEP 3：建立變數 \tKayJayPerson := Person{ firstName: \u0026#34;Kay\u0026#34;, lastName: \u0026#34;Jay\u0026#34;, contact: ContactInfo{ email: \u0026#34;kay@jay.com\u0026#34;, phone: \u0026#34;0900000000\u0026#34;, }, } AlexPerson := Person{ firstName: \u0026#34;Alex\u0026#34;, lastName: \u0026#34;Bob\u0026#34;, } \/\/ {firstName:Kay lastName:Jay contact:{email:kay@jay.com phone:0900000000}} \t\/\/ STEP 4：印出變數 \tfmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, KayJayPerson) \/\/ {firstName:Alex lastName:Bob contact:{email: phone:}} \tfmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, AlexPerson) } 在 struct 使用 interface package main import \u0026#34;fmt\u0026#34; type Salaried interface { getSalary() int } type Salary struct { basic int insurance int allowance int } func (s Salary) getSalary() int { return s.basic \u002b s.insurance \u002b s.allowance } type Employee struct { firstName, lastName string salary Salaried \/\/ 只要 salary 實作了 Salaried，就可以 Salaried interface type } func main() { ross := Employee{ firstName: \u0026#34;Kay\u0026#34;, lastName: \u0026#34;Jay\u0026#34;, \/\/ 因為 Salary struct 已經實作了 Salaried，因此可以當作 salary 的欄位值 \tsalary: Salary{ basic: 1000, insurance: 100, allowance: 50, }, } \/\/ Kay\u0026#39;s salary is 1150 \tfmt.Println(\u0026#34;Kay\u0026#39;s salary is\u0026#34;, ross.salary.getSalary()) } 匿名 struct employee := struct { Name string }{ Name: \u0026#34;KJ\u0026#34;, } \/\/ {KJ} fmt.Println(employee) \/\/ {Name:KJ} fmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, employee) struct 的比較 當兩個 struct 結構相同，數值相同，可以拿來做比較\npackage main import \u0026#34;fmt\u0026#34; type Person struct { FirstName string LastName string } func main() { Person1 := Person{ FirstName: \u0026#34;Kay\u0026#34;, LastName: \u0026#34;Jay\u0026#34;, } Person2 := Person{ FirstName: \u0026#34;Kay\u0026#34;, LastName: \u0026#34;Jay\u0026#34;, } \/\/ true \tfmt.Println(Person1 == Person2) } 參考資料  [Golang] Struct | PJCHENder 未整理筆記  "
+		"articleBody": "structs 是在 GO 中的一種資料型態，它就類似 JavaScript 中的物件（Object）或是 Ruby 中的 Hash。\n格式 type \u0026lt;結構名稱\u0026gt; struct { \u0026lt;鍵值1\u0026gt; \u0026lt;數值類型\u0026gt; \u0026lt;鍵值2\u0026gt; \u0026lt;數值類型\u0026gt; } 建立 Struct \/\/ STEP 1：建立一個 person 型別，它本質上是 struct type Person struct { firstName string lastName string } \/\/ 等同於 type Person struct { firstName, lastName string } 根據資料輸入的順序決定誰是 firstName 和 lastName alex := Person{\u0026#34;Alex\u0026#34;, \u0026#34;Anderson\u0026#34;} \/\/ {Alex Anderson} fmt.Println(alex) \/\/ {firstName:Alex lastName:Anderson} fmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, alex) 直接取得 struct 的 pointer alex := \u0026amp;Person{\u0026#34;Alex\u0026#34;, \u0026#34;Anderson\u0026#34;} \/\/ \u0026amp;{Alex Anderson} fmt.Println(alex) \/\/ \u0026amp;{firstName:Alex lastName:Anderson} fmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, alex) 指定 structure 鍵值數值（建議使用）  程式可讀性高，不會指定到錯誤的鍵值資料\n alex := Person{ firstName: \u0026#34;Alex\u0026#34;, lastName: \u0026#34;Anderson\u0026#34;, } \/\/ {Alex Anderson} fmt.Println(alex) \/\/ {firstName:Alex lastName:Anderson} fmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, alex) 先宣告再賦值 var alex Person alex.firstName = \u0026#34;Alex\u0026#34; alex.lastName = \u0026#34;Anderson\u0026#34; \/\/ {Alex Anderson} fmt.Println(alex) 巢狀 struct package main import \u0026#34;fmt\u0026#34; \/\/ STEP 1：定義外層 struct type Person struct { firstName string lastName string contact ContactInfo } \/\/ STEP 2：定義內層 struct type ContactInfo struct { email string phone string } func main() { \/\/ STEP 3：建立變數 \tKayJayPerson := Person{ firstName: \u0026#34;Kay\u0026#34;, lastName: \u0026#34;Jay\u0026#34;, contact: ContactInfo{ email: \u0026#34;kay@jay.com\u0026#34;, phone: \u0026#34;0900000000\u0026#34;, }, } AlexPerson := Person{ firstName: \u0026#34;Alex\u0026#34;, lastName: \u0026#34;Bob\u0026#34;, } \/\/ {firstName:Kay lastName:Jay contact:{email:kay@jay.com phone:0900000000}} \t\/\/ STEP 4：印出變數 \tfmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, KayJayPerson) \/\/ {firstName:Alex lastName:Bob contact:{email: phone:}} \tfmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, AlexPerson) } 在 struct 使用 interface package main import \u0026#34;fmt\u0026#34; type Salaried interface { getSalary() int } type Salary struct { basic int insurance int allowance int } func (s Salary) getSalary() int { return s.basic \u002b s.insurance \u002b s.allowance } type Employee struct { firstName, lastName string salary Salaried \/\/ 只要 salary 實作了 Salaried，就可以 Salaried interface type } func main() { ross := Employee{ firstName: \u0026#34;Kay\u0026#34;, lastName: \u0026#34;Jay\u0026#34;, \/\/ 因為 Salary struct 已經實作了 Salaried，因此可以當作 salary 的欄位值 \tsalary: Salary{ basic: 1000, insurance: 100, allowance: 50, }, } \/\/ Kay\u0026#39;s salary is 1150 \tfmt.Println(\u0026#34;Kay\u0026#39;s salary is\u0026#34;, ross.salary.getSalary()) } 匿名 struct employee := struct { Name string }{ Name: \u0026#34;KJ\u0026#34;, } \/\/ {KJ} fmt.Println(employee) \/\/ {Name:KJ} fmt.Printf(\u0026#34;%\u002bv\\n\u0026#34;, employee) struct 的比較 當兩個 struct 結構相同，數值相同，可以拿來做比較\npackage main import \u0026#34;fmt\u0026#34; type Person struct { FirstName string LastName string } func main() { Person1 := Person{ FirstName: \u0026#34;Kay\u0026#34;, LastName: \u0026#34;Jay\u0026#34;, } Person2 := Person{ FirstName: \u0026#34;Kay\u0026#34;, LastName: \u0026#34;Jay\u0026#34;, } \/\/ true \tfmt.Println(Person1 == Person2) } 直接定義使用 struct 函式 package main import ( \u0026#34;fmt\u0026#34; ) type People struct { name string age int } func (people People) Hello(other People) string { return `Hi! ` \u002b other.name \u002b `, I am ` \u002b people.name } func main() { KayPeople := People{name: `Kay`} JayPeople := People{`Jay`, 18} \/\/ Hi! Kay, I am Jay \tfmt.Println(JayPeople.Hello(KayPeople)) \/\/ Hi! Jay, I am Kay \tfmt.Println(KayPeople.Hello(JayPeople)) } 在 func 前面有寫這個是 (people People) 結構的函式，所以 go 會直接將這個函式與 People struct 直接綁定再一起\n所以建立完 struct 變數即可直接呼叫這個 Hello 函數\n參考資料  [Golang] Struct | PJCHENder 未整理筆記  "
 	}
 </script>
 
@@ -622,7 +622,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.a55055663fadba7c1eee614fce71e3e2.json"
+  data-offline-search-index-json-src="/offline-search-index.5a7b87a744969661809e2938b5c667ed.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -658,7 +658,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.a55055663fadba7c1eee614fce71e3e2.json"
+  data-offline-search-index-json-src="/offline-search-index.5a7b87a744969661809e2938b5c667ed.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -1006,6 +1006,29 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typebyte-li">
+    <a href="/basic/data-type/byte/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typebyte"><span class="">Byte</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -1137,6 +1160,131 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-basicfunction-li">
+    <a href="/basic/function/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-basicfunction"><span class="">函式</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicfunctionanonymous-function-li">
+    <a href="/basic/function/anonymous-function/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicfunctionanonymous-function"><span class="">匿名函式</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basictime-li">
+    <a href="/basic/time/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-basictime"><span class="">時間</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-basicmath-li">
+    <a href="/basic/math/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-basicmath"><span class="">數學</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicmathrand-li">
+    <a href="/basic/math/rand/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicmathrand"><span class="">亂數</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -1180,6 +1328,7 @@ if (!doNotTrack) {
     <li><a href="#在-struct-使用-interface">在 struct 使用 interface</a></li>
     <li><a href="#匿名-struct">匿名 struct</a></li>
     <li><a href="#struct-的比較">struct 的比較</a></li>
+    <li><a href="#直接定義使用-struct-函式">直接定義使用 struct 函式</a></li>
     <li><a href="#參考資料">參考資料</a></li>
   </ul>
 </nav>
@@ -1417,7 +1566,35 @@ if (!doNotTrack) {
 	<span style="color:#8f5902;font-style:italic">// true
 </span><span style="color:#8f5902;font-style:italic"></span>	<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">Person1</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#000">Person2</span><span style="color:#000;font-weight:bold">)</span>
 <span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h2 id="參考資料">參考資料</h2>
+</code></pre></div><h2 id="直接定義使用-struct-函式">直接定義使用 struct 函式</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:bold">package</span> <span style="color:#000">main</span>
+
+<span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000;font-weight:bold">(</span>
+	<span style="color:#4e9a06">&#34;fmt&#34;</span>
+<span style="color:#000;font-weight:bold">)</span>
+
+<span style="color:#204a87;font-weight:bold">type</span> <span style="color:#000">People</span> <span style="color:#204a87;font-weight:bold">struct</span> <span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000">name</span> <span style="color:#204a87;font-weight:bold">string</span>
+	<span style="color:#000">age</span>  <span style="color:#204a87;font-weight:bold">int</span>
+<span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#204a87;font-weight:bold">func</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">people</span> <span style="color:#000">People</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000">Hello</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">other</span> <span style="color:#000">People</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#204a87;font-weight:bold">string</span> <span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#204a87;font-weight:bold">return</span> <span style="color:#4e9a06">`Hi! `</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">other</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">name</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#4e9a06">`, I am `</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">people</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">name</span>
+<span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#204a87;font-weight:bold">func</span> <span style="color:#000">main</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+	<span style="color:#000">KayPeople</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">People</span><span style="color:#000;font-weight:bold">{</span><span style="color:#000">name</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">`Kay`</span><span style="color:#000;font-weight:bold">}</span>
+	<span style="color:#000">JayPeople</span> <span style="color:#ce5c00;font-weight:bold">:=</span> <span style="color:#000">People</span><span style="color:#000;font-weight:bold">{</span><span style="color:#4e9a06">`Jay`</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">18</span><span style="color:#000;font-weight:bold">}</span>
+
+	<span style="color:#8f5902;font-style:italic">// Hi! Kay, I am Jay
+</span><span style="color:#8f5902;font-style:italic"></span>	<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">JayPeople</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Hello</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">KayPeople</span><span style="color:#000;font-weight:bold">))</span>
+	<span style="color:#8f5902;font-style:italic">// Hi! Jay, I am Kay
+</span><span style="color:#8f5902;font-style:italic"></span>	<span style="color:#000">fmt</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Println</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">KayPeople</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">Hello</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">JayPeople</span><span style="color:#000;font-weight:bold">))</span>
+<span style="color:#000;font-weight:bold">}</span>
+
+</code></pre></div><p>在 <code>func</code> 前面有寫這個是 <code>(people People)</code> 結構的函式，所以 go 會直接將這個函式與 <code>People struct</code> 直接綁定再一起</p>
+<p>所以建立完 <code>struct</code> 變數即可直接呼叫這個 <code>Hello</code> 函數</p>
+<h2 id="參考資料">參考資料</h2>
 <ul>
 <li><a href="https://pjchender.dev/golang/structs">[Golang] Struct | PJCHENder 未整理筆記</a></li>
 </ul>

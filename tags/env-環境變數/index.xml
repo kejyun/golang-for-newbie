@@ -97,14 +97,19 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;$GOPATH/bin&lt;/td&gt;
-&lt;td&gt;主要放的是當執行 go install 時， Go 編譯後的執行檔。一般來說會建議把這個資料夾加到系統上的 global $PATH 變數，如此直接在終端機中執行這些編譯後的執行檔。&lt;/td&gt;
+&lt;td&gt;主要放的是當執行 go install 時， Go 編譯後的執行檔。一般來說會建議把這個資料夾加到系統上的 global $PATH 變數，如此直接在終端機中執行這些編譯後的執行檔&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;$GOPATH/pkg&lt;/td&gt;
-&lt;td&gt;包存一些編譯前的物件，已簡短編譯所需的時間，一般來說，開發者並不需要進來這裡。若在編譯時碰到錯誤，可以安心地把這個資料夾刪除，Go 會自己再建立新的。&lt;/td&gt;
+&lt;td&gt;包存一些編譯前的物件，已簡短編譯所需的時間，一般來說，開發者並不需要進來這裡。若在編譯時碰到錯誤，可以安心地把這個資料夾刪除，Go 會自己再建立新的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$GOPATH/src&lt;/td&gt;
+&lt;td&gt;原始碼&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;&lt;code&gt;go get&lt;/code&gt;，它會把目標下載回來放在 src 裡&lt;/p&gt;
 &lt;h2 id=&#34;設定與移除環境變數&#34;&gt;設定與移除環境變數&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# 使用 -w 設定環境變數&lt;/span&gt;
 $ go env -w &lt;span style=&#34;color:#000&#34;&gt;GOBIN&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;/somewhere/else/bin

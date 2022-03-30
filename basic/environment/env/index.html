@@ -27,7 +27,7 @@
 <meta itemprop="name" content="env 環境變數">
 <meta itemprop="description" content="Golang 基礎: env 環境變數"><meta itemprop="datePublished" content="2022-03-29T00:00:47&#43;08:00" />
 <meta itemprop="dateModified" content="2022-03-29T00:00:47&#43;08:00" />
-<meta itemprop="wordCount" content="120"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
+<meta itemprop="wordCount" content="126"><meta itemprop="image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 <meta itemprop="keywords" content="Golang,教學文件,新手教學,基礎,env 環境變數," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://golang-for-newbie.kejyun.com/images/featured-background.jpeg"/>
 
@@ -195,7 +195,7 @@ if (!doNotTrack) {
 		],
 		"genre":["KJ"],
 		"articleSection": "KJ",
-		"articleBody": "查詢環境變數 使用 go env 即可查詢環境變數\n$ go env GO111MODULE=\u0026#34;\u0026#34; GOARCH=\u0026#34;amd64\u0026#34; GOBIN=\u0026#34;\u0026#34; GOCACHE=\u0026#34;\/Users\/kj\/Library\/Caches\/go-build\u0026#34; GOENV=\u0026#34;\/Users\/kj\/Library\/Application Support\/go\/env\u0026#34; GOEXE=\u0026#34;\u0026#34; GOEXPERIMENT=\u0026#34;\u0026#34; GOFLAGS=\u0026#34;\u0026#34; GOHOSTARCH=\u0026#34;amd64\u0026#34; GOHOSTOS=\u0026#34;darwin\u0026#34; GOINSECURE=\u0026#34;\u0026#34; GOMODCACHE=\u0026#34;\/Users\/kj\/go\/pkg\/mod\u0026#34; GONOPROXY=\u0026#34;\u0026#34; GONOSUMDB=\u0026#34;\u0026#34; GOOS=\u0026#34;darwin\u0026#34; GOPATH=\u0026#34;\/Users\/kj\/go\u0026#34; GOPRIVATE=\u0026#34;\u0026#34; GOPROXY=\u0026#34;https:\/\/proxy.golang.org,direct\u0026#34; GOROOT=\u0026#34;\/usr\/local\/go\u0026#34; GOSUMDB=\u0026#34;sum.golang.org\u0026#34; GOTMPDIR=\u0026#34;\u0026#34; GOTOOLDIR=\u0026#34;\/usr\/local\/go\/pkg\/tool\/darwin_amd64\u0026#34; GOVCS=\u0026#34;\u0026#34; GOVERSION=\u0026#34;go1.18\u0026#34; GCCGO=\u0026#34;gccgo\u0026#34; GOAMD64=\u0026#34;v1\u0026#34; AR=\u0026#34;ar\u0026#34; CC=\u0026#34;clang\u0026#34; CXX=\u0026#34;clang\u002b\u002b\u0026#34; CGO_ENABLED=\u0026#34;1\u0026#34; GOMOD=\u0026#34;\/dev\/null\u0026#34; GOWORK=\u0026#34;\u0026#34; CGO_CFLAGS=\u0026#34;-g -O2\u0026#34; CGO_CPPFLAGS=\u0026#34;\u0026#34; CGO_CXXFLAGS=\u0026#34;-g -O2\u0026#34; CGO_FFLAGS=\u0026#34;-g -O2\u0026#34; CGO_LDFLAGS=\u0026#34;-g -O2\u0026#34; PKG_CONFIG=\u0026#34;pkg-config\u0026#34; GOGCCFLAGS=\u0026#34;-fPIC -arch x86_64 -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=\/var\/folders\/ww\/_fvvfmxs3nl880tfcf5bydhh0000gn\/T\/go-build2503645920=\/tmp\/go-build -gno-record-gcc-switches -fno-common\u0026#34; 環境變數說明    變數名稱 說明     GOPATH 在沒有使用 Go Modules 前，GOPATH 會是所有工作環境的根目錄   GOROOT Go 語言本身自己要用的東西，或是內建的函式庫，像是 Go 編譯成執行檔時所用的工具    GOPATH 包含三個資料夾：src、pkg、bin\n   目錄 說明     $GOPATH\/bin 主要放的是當執行 go install 時， Go 編譯後的執行檔。一般來說會建議把這個資料夾加到系統上的 global $PATH 變數，如此直接在終端機中執行這些編譯後的執行檔。   $GOPATH\/pkg 包存一些編譯前的物件，已簡短編譯所需的時間，一般來說，開發者並不需要進來這裡。若在編譯時碰到錯誤，可以安心地把這個資料夾刪除，Go 會自己再建立新的。    設定與移除環境變數 # 使用 -w 設定環境變數 $ go env -w GOBIN=\/somewhere\/else\/bin # 使用 -u 移除環境變數 $ go env -u GOBIN 參考資料  [Golang] 環境變數 environment variables | PJCHENder 未整理筆記  "
+		"articleBody": "查詢環境變數 使用 go env 即可查詢環境變數\n$ go env GO111MODULE=\u0026#34;\u0026#34; GOARCH=\u0026#34;amd64\u0026#34; GOBIN=\u0026#34;\u0026#34; GOCACHE=\u0026#34;\/Users\/kj\/Library\/Caches\/go-build\u0026#34; GOENV=\u0026#34;\/Users\/kj\/Library\/Application Support\/go\/env\u0026#34; GOEXE=\u0026#34;\u0026#34; GOEXPERIMENT=\u0026#34;\u0026#34; GOFLAGS=\u0026#34;\u0026#34; GOHOSTARCH=\u0026#34;amd64\u0026#34; GOHOSTOS=\u0026#34;darwin\u0026#34; GOINSECURE=\u0026#34;\u0026#34; GOMODCACHE=\u0026#34;\/Users\/kj\/go\/pkg\/mod\u0026#34; GONOPROXY=\u0026#34;\u0026#34; GONOSUMDB=\u0026#34;\u0026#34; GOOS=\u0026#34;darwin\u0026#34; GOPATH=\u0026#34;\/Users\/kj\/go\u0026#34; GOPRIVATE=\u0026#34;\u0026#34; GOPROXY=\u0026#34;https:\/\/proxy.golang.org,direct\u0026#34; GOROOT=\u0026#34;\/usr\/local\/go\u0026#34; GOSUMDB=\u0026#34;sum.golang.org\u0026#34; GOTMPDIR=\u0026#34;\u0026#34; GOTOOLDIR=\u0026#34;\/usr\/local\/go\/pkg\/tool\/darwin_amd64\u0026#34; GOVCS=\u0026#34;\u0026#34; GOVERSION=\u0026#34;go1.18\u0026#34; GCCGO=\u0026#34;gccgo\u0026#34; GOAMD64=\u0026#34;v1\u0026#34; AR=\u0026#34;ar\u0026#34; CC=\u0026#34;clang\u0026#34; CXX=\u0026#34;clang\u002b\u002b\u0026#34; CGO_ENABLED=\u0026#34;1\u0026#34; GOMOD=\u0026#34;\/dev\/null\u0026#34; GOWORK=\u0026#34;\u0026#34; CGO_CFLAGS=\u0026#34;-g -O2\u0026#34; CGO_CPPFLAGS=\u0026#34;\u0026#34; CGO_CXXFLAGS=\u0026#34;-g -O2\u0026#34; CGO_FFLAGS=\u0026#34;-g -O2\u0026#34; CGO_LDFLAGS=\u0026#34;-g -O2\u0026#34; PKG_CONFIG=\u0026#34;pkg-config\u0026#34; GOGCCFLAGS=\u0026#34;-fPIC -arch x86_64 -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=\/var\/folders\/ww\/_fvvfmxs3nl880tfcf5bydhh0000gn\/T\/go-build2503645920=\/tmp\/go-build -gno-record-gcc-switches -fno-common\u0026#34; 環境變數說明    變數名稱 說明     GOPATH 在沒有使用 Go Modules 前，GOPATH 會是所有工作環境的根目錄   GOROOT Go 語言本身自己要用的東西，或是內建的函式庫，像是 Go 編譯成執行檔時所用的工具    GOPATH 包含三個資料夾：src、pkg、bin\n   目錄 說明     $GOPATH\/bin 主要放的是當執行 go install 時， Go 編譯後的執行檔。一般來說會建議把這個資料夾加到系統上的 global $PATH 變數，如此直接在終端機中執行這些編譯後的執行檔   $GOPATH\/pkg 包存一些編譯前的物件，已簡短編譯所需的時間，一般來說，開發者並不需要進來這裡。若在編譯時碰到錯誤，可以安心地把這個資料夾刪除，Go 會自己再建立新的   $GOPATH\/src 原始碼    go get，它會把目標下載回來放在 src 裡\n設定與移除環境變數 # 使用 -w 設定環境變數 $ go env -w GOBIN=\/somewhere\/else\/bin # 使用 -u 移除環境變數 $ go env -u GOBIN 參考資料  [Golang] 環境變數 environment variables | PJCHENder 未整理筆記  "
 	}
 </script>
 
@@ -622,7 +622,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.a55055663fadba7c1eee614fce71e3e2.json"
+  data-offline-search-index-json-src="/offline-search-index.5a7b87a744969661809e2938b5c667ed.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -658,7 +658,7 @@ if (!doNotTrack) {
   aria-label="搜尋"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.a55055663fadba7c1eee614fce71e3e2.json"
+  data-offline-search-index-json-src="/offline-search-index.5a7b87a744969661809e2938b5c667ed.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="25"
 >
@@ -1006,6 +1006,29 @@ if (!doNotTrack) {
 
           
         
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicdata-typebyte-li">
+    <a href="/basic/data-type/byte/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicdata-typebyte"><span class="">Byte</span></a>
+    
+  </li>
+
+          
+        
       </ul>
     
   </li>
@@ -1126,6 +1149,131 @@ if (!doNotTrack) {
   
   <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicoperatorsbits-li">
     <a href="/basic/operators/bits/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicoperatorsbits"><span class="">位元 bits</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-basicfunction-li">
+    <a href="/basic/function/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-basicfunction"><span class="">函式</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicfunctionanonymous-function-li">
+    <a href="/basic/function/anonymous-function/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicfunctionanonymous-function"><span class="">匿名函式</span></a>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basictime-li">
+    <a href="/basic/time/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-basictime"><span class="">時間</span></a>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-basicmath-li">
+    <a href="/basic/math/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section" id="m-basicmath"><span class="">數學</span></a>
+    
+      
+      <ul class="pr-md-3 ul-2">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-basicmathrand-li">
+    <a href="/basic/math/rand/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__page" id="m-basicmathrand"><span class="">亂數</span></a>
     
   </li>
 
@@ -1320,14 +1468,19 @@ if (!doNotTrack) {
 <tbody>
 <tr>
 <td>$GOPATH/bin</td>
-<td>主要放的是當執行 go install 時， Go 編譯後的執行檔。一般來說會建議把這個資料夾加到系統上的 global $PATH 變數，如此直接在終端機中執行這些編譯後的執行檔。</td>
+<td>主要放的是當執行 go install 時， Go 編譯後的執行檔。一般來說會建議把這個資料夾加到系統上的 global $PATH 變數，如此直接在終端機中執行這些編譯後的執行檔</td>
 </tr>
 <tr>
 <td>$GOPATH/pkg</td>
-<td>包存一些編譯前的物件，已簡短編譯所需的時間，一般來說，開發者並不需要進來這裡。若在編譯時碰到錯誤，可以安心地把這個資料夾刪除，Go 會自己再建立新的。</td>
+<td>包存一些編譯前的物件，已簡短編譯所需的時間，一般來說，開發者並不需要進來這裡。若在編譯時碰到錯誤，可以安心地把這個資料夾刪除，Go 會自己再建立新的</td>
+</tr>
+<tr>
+<td>$GOPATH/src</td>
+<td>原始碼</td>
 </tr>
 </tbody>
 </table>
+<p><code>go get</code>，它會把目標下載回來放在 src 裡</p>
 <h2 id="設定與移除環境變數">設定與移除環境變數</h2>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#8f5902;font-style:italic"># 使用 -w 設定環境變數</span>
 $ go env -w <span style="color:#000">GOBIN</span><span style="color:#ce5c00;font-weight:bold">=</span>/somewhere/else/bin
